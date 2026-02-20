@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         marcellus: ['Marcellus', 'serif'],
+        heroDisplay: ['"Playfair Display"', 'serif'],
         syne: ['Syne', 'sans-serif'],
         bigshoulders: ['"Big Shoulders Display"', 'cursive'],
       },
