@@ -38,13 +38,13 @@ export default function Hero() {
       <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
         <h1
           ref={titleRef}
-          className="fade-up font-heroDisplay text-7xl md:text-9xl lg:text-[11rem] xl:text-[13rem] text-white leading-[0.9] tracking-[-0.03em] mb-10 uppercase"
+          className="fade-up font-heroDisplay text-6xl md:text-8xl lg:text-[8rem] xl:text-[9.5rem] text-white leading-[0.95] tracking-[-0.02em] mb-10 uppercase"
         >
           Life Inspired
           <br />
           <span className="inline-flex items-center">
             By Open
-            <span className="hero-inline-img mx-4 lg:mx-6 lg:!w-[180px] lg:!h-[90px] xl:!w-[220px] xl:!h-[110px]">
+            <span className="hero-inline-img mx-3 lg:mx-5 lg:!w-[150px] lg:!h-[75px] xl:!w-[180px] xl:!h-[90px]">
               <img
                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=200&q=80"
                 alt="Villa"
