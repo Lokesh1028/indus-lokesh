@@ -2,10 +2,10 @@
 import { useEffect, useRef } from 'react'
 
 const proximities = [
-  { time: '2', unit: 'mins', place: 'Exit-14 ORR' },
-  { time: '3', unit: 'mins', place: 'Fab City' },
-  { time: '10', unit: 'mins', place: 'Wonderla / Airport' },
-  { time: '25', unit: 'mins', place: 'Financial District' },
+  { time: '5', unit: 'mins', place: 'NH65 Highway' },
+  { time: '10', unit: 'mins', place: 'Hayathnagar' },
+  { time: '15', unit: 'mins', place: 'LB Nagar' },
+  { time: '25', unit: 'mins', place: 'Uppal / IT Corridor' },
 ]
 
 export default function Location() {
@@ -38,12 +38,12 @@ export default function Location() {
               Prime Location
             </p>
             <h2 className="fade-up font-marcellus text-4xl md:text-5xl text-dark leading-tight mb-6">
-              Remarkably Different. Comfortably Near at Tukkuguda
+              Pasumamula, Hayathnagar — Connected Yet Serene
             </h2>
             <p className="fade-up font-syne text-lg text-gray-600 mb-10">
-              Strategically positioned at Tukkuguda, AURELIA offers the perfect balance of 
-              suburban serenity and urban connectivity. With seamless access to major highways, 
-              the airport, and the Financial District, everything you need is just minutes away.
+              Strategically located near NH65 in Rangareddy district, Abhi&apos;s Aloha offers the perfect 
+              balance of suburban serenity and urban connectivity. With seamless access to major highways, 
+              IT hubs, and essential amenities, everything you need is just minutes away.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -59,18 +59,22 @@ export default function Location() {
             </div>
           </div>
 
-          {/* Map placeholder */}
+          {/* Map */}
           <div className="fade-up">
             <div className="rounded-xl overflow-hidden shadow-lg" style={{ transitionDelay: '0.3s' }}>
-              <img
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
-                alt="Location Map"
-                className="w-full h-[400px] md:h-[500px] object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.123456!2d78.55!3d17.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPasumamula%2C+Hayathnagar!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
               />
               <div className="bg-white p-6">
-                <p className="font-marcellus text-xl text-dark mb-2">AURELIA by Indus Lokesh</p>
-                <p className="font-syne text-gray-600">Tukkuguda, Hyderabad, Telangana</p>
+                <p className="font-marcellus text-xl text-dark mb-2">Abhi&apos;s Aloha by Indus Homes</p>
+                <p className="font-syne text-gray-600">Pasumamula, Hayathnagar, Rangareddy, Hyderabad</p>
               </div>
             </div>
           </div>

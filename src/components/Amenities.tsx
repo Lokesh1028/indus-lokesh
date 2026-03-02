@@ -19,12 +19,12 @@ const amenities = [
     image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
   },
   {
-    name: 'Co-Working Spaces',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    name: 'Children\'s Play Area',
+    image: 'https://images.unsplash.com/photo-1596997000103-e597b3ca50df?w=800&q=80',
   },
   {
-    name: 'Guest Rooms',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80',
+    name: 'Walking Track',
+    image: 'https://images.unsplash.com/photo-1551913902-c92207136625?w=800&q=80',
   },
 ]
 

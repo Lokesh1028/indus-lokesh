@@ -22,8 +22,9 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'intro' },
+    { label: 'Project', id: 'project' },
     { label: 'Amenities', id: 'amenities' },
-    { label: 'Clubhouse', id: 'clubhouse' },
+    { label: 'Why Us', id: 'whyus' },
     { label: 'Location', id: 'location' },
     { label: 'Contact', id: 'contact' },
   ]
@@ -34,7 +35,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('hero')}>
             <span className="font-marcellus text-2xl tracking-wider" style={{ color: scrolled ? '#1E1E1E' : '#fff' }}>
-              INDUS LOKESH
+              INDUS HOMES
             </span>
           </div>
           
@@ -49,6 +50,12 @@ export default function Header() {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => scrollTo('contact')}
+              className="font-syne text-sm tracking-wide px-6 py-2.5 bg-accent text-white rounded-full hover:bg-accent/90 transition-all"
+            >
+              Book Site Visit
+            </button>
           </nav>
 
           <button
@@ -72,7 +79,8 @@ export default function Header() {
           ×
         </button>
         <div className="mt-12">
-          <p className="font-marcellus text-2xl mb-8 text-dark">INDUS LOKESH</p>
+          <p className="font-marcellus text-2xl mb-2 text-dark">INDUS HOMES</p>
+          <p className="font-syne text-xs text-gray-400 mb-8 tracking-wider">SINCE 2002</p>
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -82,6 +90,12 @@ export default function Header() {
               {link.label}
             </button>
           ))}
+          <button
+            onClick={() => scrollTo('contact')}
+            className="mt-6 w-full font-syne text-sm tracking-wide px-6 py-3 bg-accent text-white rounded-full hover:bg-accent/90 transition-all"
+          >
+            Book Site Visit
+          </button>
         </div>
       </div>
     </>

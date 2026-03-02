@@ -31,8 +31,8 @@ export default function Home() {
         <IntroSection />
         <ImageGallery />
         <FullParallax />
-        <Amenities />
         <Clubhouse />
+        <Amenities />
         <HorizontalScroll />
         <OutdoorSlider />
         <div className="section-divider" />

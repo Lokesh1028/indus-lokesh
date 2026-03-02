@@ -28,11 +28,11 @@ export default function FullParallax() {
           Wide Pathways & Green Corridors
         </p>
         <h3 className="fade-up font-marcellus text-3xl md:text-5xl text-dark leading-tight mb-6" style={{ transitionDelay: '0.15s' }}>
-          Expansive walkways lined with verdant greens, designed for morning strolls and evening conversations
+          40-foot wide roads lined with verdant greens, designed for morning strolls and evening conversations
         </h3>
         <p className="fade-up font-syne text-lg text-gray-600" style={{ transitionDelay: '0.3s' }}>
-          Every pathway at AURELIA has been crafted to connect you with nature, offering a seamless 
-          transition between indoor luxury and outdoor tranquility.
+          Every pathway at Abhi&apos;s Aloha has been crafted to connect you with nature, offering a seamless 
+          transition between indoor luxury and outdoor tranquility — with aesthetic underground lighting throughout.
         </p>
       </div>
       

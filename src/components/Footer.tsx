@@ -12,10 +12,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo & Tagline */}
           <div className="lg:col-span-1">
-            <h3 className="font-marcellus text-2xl mb-4">INDUS LOKESH</h3>
+            <h3 className="font-marcellus text-2xl mb-2">INDUS HOMES</h3>
+            <p className="font-syne text-white/40 text-xs tracking-wider mb-4">PRIVATE LIMITED · EST. 2002</p>
             <p className="font-syne text-white/60 text-sm leading-relaxed">
-              Crafting exceptional living spaces that inspire generations. 
-              Where luxury meets legacy.
+              Transforming the real estate industry through sophisticated residential developments 
+              that prioritize customer delight, excellence, and uncompromising business ethics.
             </p>
           </div>
 
@@ -23,26 +24,40 @@ export default function Footer() {
           <div>
             <h4 className="font-syne text-sm tracking-[0.2em] uppercase mb-6 text-white/40">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Amenities', 'Clubhouse', 'Location', 'Contact'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'Home', id: 'hero' },
+                { label: 'About', id: 'intro' },
+                { label: 'Abhi\'s Aloha', id: 'project' },
+                { label: 'Amenities', id: 'amenities' },
+                { label: 'Why Choose Us', id: 'whyus' },
+                { label: 'Location', id: 'location' },
+                { label: 'Contact', id: 'contact' },
+              ].map((link) => (
+                <li key={link.id}>
                   <button
-                    onClick={() => scrollTo(link.toLowerCase() === 'home' ? 'hero' : link.toLowerCase() === 'about' ? 'intro' : link.toLowerCase())}
+                    onClick={() => scrollTo(link.id)}
                     className="font-syne text-white/60 hover:text-accent transition-colors text-sm"
                   >
-                    {link}
+                    {link.label}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Office */}
+          {/* Offices */}
           <div>
-            <h4 className="font-syne text-sm tracking-[0.2em] uppercase mb-6 text-white/40">Office</h4>
-            <div className="space-y-3 font-syne text-white/60 text-sm">
-              <p>Plot No. 42, Road No. 7</p>
-              <p>Banjara Hills, Hyderabad</p>
-              <p>Telangana - 500034</p>
+            <h4 className="font-syne text-sm tracking-[0.2em] uppercase mb-6 text-white/40">Hyderabad Office</h4>
+            <div className="space-y-2 font-syne text-white/60 text-sm mb-8">
+              <p>Plot No. 95, 1st Floor, Road No. 4</p>
+              <p>Phase-1, Uppal Bhagayath, Shilparamam</p>
+              <p>Hyderabad</p>
+            </div>
+            <h4 className="font-syne text-sm tracking-[0.2em] uppercase mb-4 text-white/40">Bangalore Office</h4>
+            <div className="space-y-2 font-syne text-white/60 text-sm">
+              <p>#84, 1st Floor, R.V. Road</p>
+              <p>Basavangudi, Bangalore</p>
+              <p>Karnataka - 560004</p>
             </div>
           </div>
 
@@ -51,13 +66,18 @@ export default function Footer() {
             <h4 className="font-syne text-sm tracking-[0.2em] uppercase mb-6 text-white/40">Contact</h4>
             <div className="space-y-3 font-syne text-white/60 text-sm">
               <p>
-                <a href="tel:+919876543210" className="hover:text-accent transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919966333400" className="hover:text-accent transition-colors">
+                  +91 9966 333 400
                 </a>
               </p>
               <p>
-                <a href="mailto:info@induslokesh.com" className="hover:text-accent transition-colors">
-                  info@induslokesh.com
+                <a href="mailto:info@indushomes.co.in" className="hover:text-accent transition-colors">
+                  info@indushomes.co.in
+                </a>
+              </p>
+              <p>
+                <a href="https://indushomes.co.in" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  indushomes.co.in
                 </a>
               </p>
             </div>
@@ -77,10 +97,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-syne text-white/40 text-sm">
-            © 2024 Indus Lokesh. All rights reserved.
+            © {new Date().getFullYear()} Indus Homes Private Limited. All rights reserved.
           </p>
           <p className="font-syne text-white/40 text-sm">
-            Designed with passion for luxury living
+            Crafting exceptional living spaces since 2002
           </p>
         </div>
       </div>
