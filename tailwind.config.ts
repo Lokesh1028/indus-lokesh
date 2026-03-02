@@ -13,6 +13,7 @@ const config: Config = {
         heroDisplay: ['"Playfair Display"', 'serif'],
         syne: ['Syne', 'sans-serif'],
         bigshoulders: ['"Big Shoulders Display"', 'cursive'],
+        aladin: ['Aladin', 'system-ui'],
       },
       colors: {
         dark: '#1E1E1E',

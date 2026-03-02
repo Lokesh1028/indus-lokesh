@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 const amenities = [
   {
@@ -30,41 +30,24 @@ const amenities = [
 
 export default function Amenities() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const sectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const els = entry.target.querySelectorAll('.fade-up')
-            els.forEach((el, i) => {
-              setTimeout(() => el.classList.add('visible'), i * 100)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
 
   return (
-    <section id="amenities" ref={sectionRef} className="py-24 md:py-36 px-6 bg-light">
+    <section id="amenities" className="py-28 md:py-40 px-6 bg-[var(--tp-grey-4)]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="fade-up font-syne text-sm tracking-[0.3em] uppercase text-accent mb-4">
-            Amenities
-          </p>
-          <h2 className="fade-up font-marcellus text-4xl md:text-6xl text-dark">
-            Unwind in Style
-          </h2>
+          <div className="tp-fade-bottom">
+            <span className="tp-section-subtitle">Amenities</span>
+          </div>
+          <div className="tp-fade-bottom stagger-delay-1">
+            <h2 className="tp-section-title text-4xl md:text-6xl">
+              Unwind in Style
+            </h2>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Amenity List */}
-          <div className="fade-up">
+          <div className="tp-fade-left">
             {amenities.map((amenity, i) => (
               <div
                 key={i}
@@ -75,20 +58,20 @@ export default function Amenities() {
                   <span className="amenity-number">0{i + 1}</span>
                   <span className="amenity-name">{amenity.name}</span>
                 </div>
-                <span className="amenity-arrow text-accent">→</span>
+                <span className="amenity-arrow text-[var(--tp-accent)]">→</span>
               </div>
             ))}
           </div>
 
           {/* Amenity Image */}
-          <div className="fade-up hidden lg:block sticky top-32">
-            <div className="amenity-image-container rounded-xl" style={{ height: '500px' }}>
+          <div className="tp-fade-right hidden lg:block sticky top-32">
+            <div className="amenity-image-container" style={{ height: '520px' }}>
               {amenities.map((amenity, i) => (
                 <img
                   key={i}
                   src={amenity.image}
                   alt={amenity.name}
-                  className={`rounded-xl ${i === activeIndex ? 'active' : ''}`}
+                  className={`rounded-2xl ${i === activeIndex ? 'active' : ''}`}
                   loading="lazy"
                 />
               ))}

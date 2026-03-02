@@ -22,9 +22,8 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'intro' },
-    { label: 'Project', id: 'project' },
+    { label: 'Abhi\'s Aloha', id: 'project' },
     { label: 'Amenities', id: 'amenities' },
-    { label: 'Why Us', id: 'whyus' },
     { label: 'Location', id: 'location' },
     { label: 'Contact', id: 'contact' },
   ]
@@ -32,70 +31,83 @@ export default function Header() {
   return (
     <>
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('hero')}>
-            <span className="font-marcellus text-2xl tracking-wider" style={{ color: scrolled ? '#1E1E1E' : '#fff' }}>
+            <span className="font-marcellus text-xl md:text-2xl tracking-wider" style={{ color: scrolled ? '#1E1E1E' : '#fff' }}>
               INDUS HOMES
             </span>
           </div>
           
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="font-syne text-sm tracking-wide hover:text-accent transition-colors"
-                style={{ color: scrolled ? '#333' : '#fff' }}
+                className="font-syne text-[13px] tracking-wide transition-colors hover-underline"
+                style={{ color: scrolled ? 'var(--tp-common-black)' : '#fff' }}
               >
                 {link.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollTo('contact')}
-              className="font-syne text-sm tracking-wide px-6 py-2.5 bg-accent text-white rounded-full hover:bg-accent/90 transition-all"
-            >
-              Book Site Visit
-            </button>
           </nav>
 
+          {/* Hamburger (Grupe Nayan style - two lines) */}
           <button
-            className="md:hidden flex flex-col gap-1.5"
+            className="flex flex-col gap-2"
             onClick={() => setMenuOpen(true)}
           >
-            <span className="w-6 h-0.5 transition-colors" style={{ background: scrolled ? '#333' : '#fff' }}></span>
-            <span className="w-6 h-0.5 transition-colors" style={{ background: scrolled ? '#333' : '#fff' }}></span>
-            <span className="w-4 h-0.5 transition-colors" style={{ background: scrolled ? '#333' : '#fff' }}></span>
+            <span className="w-7 h-[2px] transition-all" style={{ background: scrolled ? 'var(--tp-common-black)' : '#fff' }}></span>
+            <span className="w-5 h-[2px] transition-all ml-auto" style={{ background: scrolled ? 'var(--tp-common-black)' : '#fff' }}></span>
           </button>
         </div>
       </header>
 
-      {/* Offcanvas Mobile Menu */}
+      {/* Offcanvas Menu (Grupe Nayan style) */}
       <div className={`offcanvas-overlay ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)} />
       <div className={`offcanvas-menu ${menuOpen ? 'open' : ''}`}>
-        <button
-          className="absolute top-6 right-6 text-3xl text-dark"
-          onClick={() => setMenuOpen(false)}
-        >
-          ×
-        </button>
-        <div className="mt-12">
-          <p className="font-marcellus text-2xl mb-2 text-dark">INDUS HOMES</p>
-          <p className="font-syne text-xs text-gray-400 mb-8 tracking-wider">SINCE 2002</p>
+        <div className="flex items-center justify-between mb-16">
+          <span className="font-marcellus text-xl text-[var(--tp-common-black)]">INDUS HOMES</span>
+          <button
+            className="text-[var(--tp-common-black)] hover:text-[var(--tp-accent)] transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            <svg width="28" height="28" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="mb-16">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className="block w-full text-left font-syne text-lg py-3 border-b border-gray-100 text-dark hover:text-accent transition-colors"
+              className="block w-full text-left font-syne text-lg py-4 border-b border-[var(--tp-border-1)] text-[var(--tp-common-black)] hover:text-[var(--tp-accent)] hover:pl-4 transition-all"
             >
               {link.label}
             </button>
           ))}
-          <button
-            onClick={() => scrollTo('contact')}
-            className="mt-6 w-full font-syne text-sm tracking-wide px-6 py-3 bg-accent text-white rounded-full hover:bg-accent/90 transition-all"
-          >
-            Book Site Visit
-          </button>
+        </div>
+
+        <div className="space-y-6">
+          <div>
+            <p className="font-syne text-xs tracking-[0.2em] uppercase text-gray-400 mb-3">Contact Us</p>
+            <a href="tel:+919966333400" className="font-syne text-[var(--tp-common-black)] block hover:text-[var(--tp-accent)] transition-colors">
+              +91 9966 333 400
+            </a>
+            <a href="mailto:info@indushomes.co.in" className="font-syne text-[var(--tp-common-black)] block hover:text-[var(--tp-accent)] transition-colors text-sm mt-1">
+              info@indushomes.co.in
+            </a>
+          </div>
+          <div>
+            <p className="font-syne text-xs tracking-[0.2em] uppercase text-gray-400 mb-3">Office</p>
+            <p className="font-syne text-[var(--tp-text-body)] text-sm leading-relaxed">
+              Plot No. 95, 1st Floor, Road No. 4,<br />
+              Phase-1, Uppal Bhagayath, Shilparamam,<br />
+              Hyderabad
+            </p>
+          </div>
         </div>
       </div>
     </>

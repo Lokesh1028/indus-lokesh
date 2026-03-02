@@ -1,60 +1,47 @@
 'use client'
-import { useEffect, useRef } from 'react'
-
-const stats = [
-  { value: '22+', label: 'Years of Excellence' },
-  { value: '240', label: 'Luxury Villas' },
-  { value: '16.1', label: 'Acres of Development' },
-  { value: '100%', label: 'On-Time Delivery' },
-]
 
 export default function IntroSection() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const els = entry.target.querySelectorAll('.fade-up')
-            els.forEach((el) => el.classList.add('visible'))
-          }
-        })
-      },
-      { threshold: 0.2 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section id="intro" ref={sectionRef} className="py-24 md:py-36 px-6">
+    <section id="intro" className="py-28 md:py-40 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="fade-up font-syne text-sm tracking-[0.3em] uppercase text-accent mb-6">
-            About Indus Homes
-          </p>
-          <h2 className="fade-up font-marcellus text-4xl md:text-6xl lg:text-7xl text-dark mb-8" style={{ transitionDelay: '0.15s' }}>
-            Building Dreams Since 2002
-          </h2>
-          <p className="fade-up font-syne text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6" style={{ transitionDelay: '0.3s' }}>
-            Founded on October 23, 2002, Indus Homes Private Limited was born from a vision to transform 
-            the real estate industry through sophisticated residential developments that prioritize 
-            customer delight, excellence, and uncompromising business ethics.
-          </p>
-          <p className="fade-up font-syne text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto" style={{ transitionDelay: '0.4s' }}>
-            Under the visionary leadership of Mr. Bhavdeep (Bobby) Reddy, who has been actively involved 
-            in real estate since 1985, we design spaces that accentuate natural beauty through seamless 
-            functionality and unique forms — committed to transparency, value for money, and an 
-            environment-friendly ambiance with timely delivery.
-          </p>
+        <div className="text-center mb-20">
+          <div className="tp-fade-bottom">
+            <span className="tp-section-subtitle">About Indus Homes</span>
+          </div>
+          <div className="tp-fade-bottom stagger-delay-1">
+            <h2 className="tp-section-title text-4xl md:text-6xl lg:text-7xl mb-10">
+              Building Dreams Since 2002
+            </h2>
+          </div>
+          <div className="tp-fade-bottom stagger-delay-2">
+            <p className="tp-content-text max-w-3xl mx-auto mb-6">
+              Founded on October 23, 2002, Indus Homes Private Limited was born from a vision to transform 
+              the real estate industry through sophisticated residential developments that prioritize 
+              customer delight, excellence, and uncompromising business ethics.
+            </p>
+          </div>
+          <div className="tp-fade-bottom stagger-delay-3">
+            <p className="tp-content-text max-w-3xl mx-auto">
+              Under the visionary leadership of Mr. Bhavdeep (Bobby) Reddy, who has been actively involved 
+              in real estate since 1985, we design spaces that accentuate natural beauty through seamless 
+              functionality and unique forms — committed to transparency, value for money, and an 
+              environment-friendly ambiance with timely delivery.
+            </p>
+          </div>
         </div>
 
         {/* Stats */}
-        <div className="fade-up grid grid-cols-2 md:grid-cols-4 gap-8 mt-16" style={{ transitionDelay: '0.5s' }}>
-          {stats.map((stat, i) => (
-            <div key={i} className="text-center">
-              <p className="font-bigshoulders text-5xl md:text-6xl font-bold text-accent mb-2">{stat.value}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
+          {[
+            { target: '22', suffix: '+', label: 'Years of Excellence' },
+            { target: '240', suffix: '', label: 'Luxury Villas' },
+            { target: '16.1', suffix: '', label: 'Acres of Development' },
+            { target: '100', suffix: '%', label: 'On-Time Delivery' },
+          ].map((stat, i) => (
+            <div key={i} className={`tp-fade-bottom stagger-delay-${i + 1} text-center`}>
+              <p className="stat-number stat-counter text-5xl md:text-7xl mb-3" data-target={stat.target} data-suffix={stat.suffix}>
+                0
+              </p>
               <p className="font-syne text-sm text-gray-500 tracking-wider uppercase">{stat.label}</p>
             </div>
           ))}

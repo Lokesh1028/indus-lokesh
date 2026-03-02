@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useRef } from 'react'
 
 const images = [
   {
@@ -25,41 +24,23 @@ const images = [
 ]
 
 export default function ImageGallery() {
-  const galleryRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const els = entry.target.querySelectorAll('.fade-up')
-            els.forEach((el, i) => {
-              setTimeout(() => el.classList.add('visible'), i * 150)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-    if (galleryRef.current) observer.observe(galleryRef.current)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section ref={galleryRef} className="py-16 md:py-24 px-6">
+    <section className="py-16 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-xl">
-          <p className="fade-up font-syne text-sm tracking-[0.3em] uppercase text-accent mb-4">
-            Crafted Spaces
-          </p>
-          <h3 className="fade-up font-marcellus text-3xl md:text-5xl text-dark leading-tight">
-            Where Architecture Meets Artistry
-          </h3>
+          <div className="tp-fade-left">
+            <span className="tp-section-subtitle">Crafted Spaces</span>
+          </div>
+          <div className="tp-fade-left stagger-delay-1">
+            <h3 className="tp-section-title text-3xl md:text-5xl leading-tight">
+              Where Architecture Meets Artistry
+            </h3>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {images.map((img, i) => (
-            <div key={i} className={`fade-up ${img.className}`}>
+            <div key={i} className={`tp-scale-up stagger-delay-${i + 1} ${img.className}`}>
               <div className="parallax-img-wrapper h-full">
                 <img
                   src={img.src}
