@@ -33,21 +33,21 @@ const services = [
 
 export default function OutdoorSlider() {
   return (
-    <section className="py-28 md:py-40 px-6">
+    <section className="py-32 md:py-44 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="tp-fade-bottom">
-            <span className="tp-section-subtitle">Our Expertise</span>
+            <span className="section-subtitle">Our Expertise</span>
           </div>
           <div className="tp-fade-bottom stagger-delay-1">
-            <h2 className="tp-section-title text-4xl md:text-6xl mb-6">
-              Services We Offer
+            <h2 className="section-title text-5xl md:text-7xl mb-8">
+              Services <em>We Offer</em>
             </h2>
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
-            <p className="tp-content-text max-w-2xl mx-auto">
+            <p className="section-text max-w-2xl mx-auto">
               From vision to reality — comprehensive real estate solutions backed by 
-              two decades of expertise and an unwavering commitment to quality.
+              two decades of expertise.
             </p>
           </div>
         </div>
@@ -55,8 +55,8 @@ export default function OutdoorSlider() {
         <div className="tp-fade-bottom stagger-delay-3">
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1.2}
+            spaceBetween={16}
+            slidesPerView={1.15}
             breakpoints={{
               640: { slidesPerView: 2.2 },
               1024: { slidesPerView: 3.2 },
@@ -65,7 +65,7 @@ export default function OutdoorSlider() {
               delay: 0,
               disableOnInteraction: false,
             }}
-            speed={3000}
+            speed={3500}
             loop={true}
             className="swiper-outdoor"
           >
@@ -74,9 +74,9 @@ export default function OutdoorSlider() {
                 <div className="relative h-full">
                   <img src={service.image} alt={service.title} loading="lazy" />
                   <div className="service-slide-overlay"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                    <h4 className="font-marcellus text-xl text-white mb-2">{service.title}</h4>
-                    <p className="font-syne text-white/60 text-sm">{service.desc}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-7 z-10">
+                    <h4 className="font-heading text-2xl text-white mb-2 font-normal">{service.title}</h4>
+                    <p className="font-body text-white/50 text-[13px] font-light">{service.desc}</p>
                   </div>
                 </div>
               </SwiperSlide>

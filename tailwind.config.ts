@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        marcellus: ['Marcellus', 'serif'],
-        heroDisplay: ['"Playfair Display"', 'serif'],
-        syne: ['Syne', 'sans-serif'],
-        bigshoulders: ['"Big Shoulders Display"', 'cursive'],
-        aladin: ['Aladin', 'system-ui'],
+        heading: ['"Cormorant Garamond"', 'serif'],
+        body: ['Montserrat', 'sans-serif'],
       },
       colors: {
-        dark: '#1E1E1E',
-        accent: '#A886CD',
-        light: '#f7f7f7',
+        black: '#1A1A1A',
+        charcoal: '#2C2C2C',
+        accent: '#B8956A',
+        'accent-hover': '#A07D55',
+        'off-white': '#F8F7F5',
+        warm: '#F5F3F0',
       },
     },
   },

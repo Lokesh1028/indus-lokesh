@@ -11,61 +11,59 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('Thank you for your inquiry! Our team will contact you shortly to schedule your site visit.')
+    alert('Thank you for your inquiry! Our team will contact you shortly.')
     setFormData({ name: '', phone: '', email: '', message: '' })
   }
 
   return (
-    <section id="contact" className="py-28 md:py-40 px-6">
+    <section id="contact" className="py-32 md:py-44 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
             <div className="tp-fade-left">
-              <span className="tp-section-subtitle">Get In Touch</span>
+              <span className="section-subtitle">Get In Touch</span>
             </div>
             <div className="tp-fade-left stagger-delay-1">
-              <h2 className="tp-section-title text-4xl md:text-5xl mb-8">
-                Book a Site Visit
+              <h2 className="section-title text-4xl md:text-6xl mb-10">
+                Book a <em>Site Visit</em>
               </h2>
             </div>
             <div className="tp-fade-left stagger-delay-2">
-              <p className="tp-content-text mb-12">
+              <p className="section-text mb-14">
                 Interested in Abhi&apos;s Aloha? Reach out to us for exclusive details, pricing, 
                 and to schedule a personal site visit.
               </p>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-12">
               <div className="tp-fade-left stagger-delay-3">
-                <h4 className="font-syne text-xs tracking-[0.2em] uppercase text-gray-400 mb-3">Hyderabad Office</h4>
-                <p className="font-syne text-[var(--tp-common-black)] text-base leading-relaxed">
+                <h4 className="font-body text-[10px] font-medium tracking-[2px] uppercase text-[var(--color-text-light)] mb-4">Hyderabad Office</h4>
+                <p className="font-body text-[var(--color-charcoal)] text-[15px] font-light leading-relaxed">
                   Plot No. 95, 1st Floor, Road No. 4,<br />
                   Phase-1, Uppal Bhagayath, Shilparamam,<br />
                   Hyderabad
                 </p>
               </div>
               <div className="tp-fade-left stagger-delay-4">
-                <h4 className="font-syne text-xs tracking-[0.2em] uppercase text-gray-400 mb-3">Bangalore Office</h4>
-                <p className="font-syne text-[var(--tp-common-black)] text-base leading-relaxed">
+                <h4 className="font-body text-[10px] font-medium tracking-[2px] uppercase text-[var(--color-text-light)] mb-4">Bangalore Office</h4>
+                <p className="font-body text-[var(--color-charcoal)] text-[15px] font-light leading-relaxed">
                   #84, 1st Floor, R.V. Road,<br />
                   Basavangudi, Bangalore,<br />
                   Karnataka - 560004
                 </p>
               </div>
               <div className="tp-fade-left stagger-delay-5">
-                <h4 className="font-syne text-xs tracking-[0.2em] uppercase text-gray-400 mb-3">Phone &amp; Email</h4>
-                <a href="tel:+919966333400" className="font-syne text-[var(--tp-common-black)] text-lg block mb-1 hover:text-[var(--tp-accent)] hover-underline">
+                <h4 className="font-body text-[10px] font-medium tracking-[2px] uppercase text-[var(--color-text-light)] mb-4">Phone &amp; Email</h4>
+                <a href="tel:+919966333400" className="font-body text-[var(--color-charcoal)] text-lg block mb-2 hover:text-[var(--color-accent)] font-light hover-underline">
                   +91 9966 333 400
                 </a>
-                <a href="mailto:info@indushomes.co.in" className="font-syne text-[var(--tp-common-black)] text-lg block hover:text-[var(--tp-accent)] hover-underline">
+                <a href="mailto:info@indushomes.co.in" className="font-body text-[var(--color-charcoal)] text-lg block hover:text-[var(--color-accent)] font-light hover-underline">
                   info@indushomes.co.in
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Form */}
           <div className="tp-fade-right">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -96,14 +94,14 @@ export default function ContactForm() {
               />
               <textarea
                 placeholder="I'm interested in Abhi's Aloha..."
-                className="contact-input mb-12 resize-none"
+                className="contact-input mb-14 resize-none"
                 rows={4}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
               <button
                 type="submit"
-                className="tp-btn-primary w-full text-center !bg-[var(--tp-accent)] !border-[var(--tp-accent)] hover:!bg-transparent hover:!text-[var(--tp-common-black)] hover:!border-[var(--tp-common-black)]"
+                className="btn-luxury btn-luxury-filled w-full text-center"
               >
                 Get Quote / Book Site Visit
               </button>

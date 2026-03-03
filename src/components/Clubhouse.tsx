@@ -35,38 +35,38 @@ const highlights = [
 
 export default function Clubhouse() {
   return (
-    <section id="project" className="py-28 md:py-40 px-6">
+    <section id="project" className="py-32 md:py-44 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <div className="tp-fade-bottom">
-            <span className="tp-section-subtitle">Flagship Project</span>
+            <span className="section-subtitle">Flagship Project</span>
           </div>
           <div className="tp-fade-bottom stagger-delay-1">
-            <h2 className="tp-section-title text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              Abhi&apos;s Aloha
+            <h2 className="section-title text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
+              <em>Abhi&apos;s Aloha</em>
             </h2>
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
-            <p className="tp-content-text max-w-3xl mx-auto mb-8">
+            <p className="section-text max-w-3xl mx-auto mb-10">
               240 premium 3 BHK luxury villas spread across 16.1 acres at Pasumamula, Hayathnagar, 
               Rangareddy — near NH65. Ready to move, starting from ₹1.22 Cr.
             </p>
           </div>
-          <div className="tp-fade-bottom stagger-delay-3 flex flex-wrap justify-center gap-4">
+          <div className="tp-fade-bottom stagger-delay-3 flex flex-wrap justify-center gap-3">
             {['3 BHK Villas', '16.1 Acres', '240 Units', 'Ready to Move', 'From ₹1.22 Cr'].map((tag, i) => (
-              <span key={i} className="px-6 py-2.5 bg-[var(--tp-grey-4)] text-[var(--tp-common-black)] font-syne text-sm font-medium">
+              <span key={i} className="px-6 py-3 bg-[var(--color-bg-warm)] text-[var(--color-charcoal)] font-body text-[11px] font-medium tracking-[1.5px] uppercase">
                 {tag}
               </span>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {highlights.map((item, i) => (
             <div key={i} className={`tp-fade-bottom stagger-delay-${Math.min(i + 1, 6)} feature-card`}>
-              <span className="text-4xl mb-5 block">{item.icon}</span>
-              <h4 className="font-marcellus text-xl text-[var(--tp-common-black)] mb-3">{item.title}</h4>
-              <p className="font-syne text-[var(--tp-text-body)] text-sm leading-relaxed">{item.desc}</p>
+              <span className="text-3xl mb-6 block">{item.icon}</span>
+              <h4 className="font-heading text-2xl text-[var(--color-black)] mb-3 font-normal">{item.title}</h4>
+              <p className="font-body text-[var(--color-text)] text-[14px] font-light leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

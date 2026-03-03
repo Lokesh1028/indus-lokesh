@@ -32,21 +32,20 @@ export default function Amenities() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="amenities" className="py-28 md:py-40 px-6 bg-[var(--tp-grey-4)]">
+    <section id="amenities" className="py-32 md:py-44 px-6 bg-[var(--color-bg-off)]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="tp-fade-bottom">
-            <span className="tp-section-subtitle">Amenities</span>
+            <span className="section-subtitle">Amenities</span>
           </div>
           <div className="tp-fade-bottom stagger-delay-1">
-            <h2 className="tp-section-title text-4xl md:text-6xl">
-              Unwind in Style
+            <h2 className="section-title text-5xl md:text-7xl">
+              <em>Unwind</em> in Style
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Amenity List */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="tp-fade-left">
             {amenities.map((amenity, i) => (
               <div
@@ -58,20 +57,19 @@ export default function Amenities() {
                   <span className="amenity-number">0{i + 1}</span>
                   <span className="amenity-name">{amenity.name}</span>
                 </div>
-                <span className="amenity-arrow text-[var(--tp-accent)]">→</span>
+                <span className="amenity-arrow">→</span>
               </div>
             ))}
           </div>
 
-          {/* Amenity Image */}
           <div className="tp-fade-right hidden lg:block sticky top-32">
-            <div className="amenity-image-container" style={{ height: '520px' }}>
+            <div className="amenity-image-container" style={{ height: '560px' }}>
               {amenities.map((amenity, i) => (
                 <img
                   key={i}
                   src={amenity.image}
                   alt={amenity.name}
-                  className={`rounded-2xl ${i === activeIndex ? 'active' : ''}`}
+                  className={i === activeIndex ? 'active' : ''}
                   loading="lazy"
                 />
               ))}

@@ -17,6 +17,7 @@ import ScrollAnimations from '@/components/ScrollAnimations'
 
 const HorizontalScroll = dynamic(() => import('@/components/HorizontalScroll'), { ssr: false })
 const OutdoorSlider = dynamic(() => import('@/components/OutdoorSlider'), { ssr: false })
+const FullscreenGallery = dynamic(() => import('@/components/FullscreenGallery'), { ssr: false })
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <FullParallax />
         <Clubhouse />
         <Amenities />
+        <FullscreenGallery />
         <HorizontalScroll />
         <OutdoorSlider />
         <div className="section-divider" />
