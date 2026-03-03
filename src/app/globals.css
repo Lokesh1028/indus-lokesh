@@ -694,3 +694,38 @@ img {
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.04);
   background: var(--color-white);
 }
+
+/* ===== FULLSCREEN GALLERY — GPU Optimized ===== */
+.fs-gallery-item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.fs-gallery-img-wrapper {
+  position: absolute;
+  inset: -8%;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.fs-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.fs-gallery-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}

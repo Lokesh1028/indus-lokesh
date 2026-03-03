@@ -5,86 +5,99 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80',
+    src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=75',
     caption: 'Where elegance meets everyday living',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80',
+    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=75',
     caption: 'Interiors designed for the connoisseur',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80',
+    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1400&q=75',
     caption: 'Your private paradise, every single day',
   },
 ]
 
 export default function FullscreenGallery() {
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-    sectionRefs.current.forEach((section) => {
-      if (!section) return
-      const img = section.querySelector('img')
-      const overlay = section.querySelector('.fullscreen-image-overlay')
+    const sections = containerRef.current?.querySelectorAll('.fs-gallery-item')
+    if (!sections) return
+
+    const tweens: gsap.core.Tween[] = []
+
+    sections.forEach((section) => {
+      const img = section.querySelector('.fs-gallery-img') as HTMLElement
+      const text = section.querySelector('.fs-gallery-text') as HTMLElement
 
       if (img) {
-        // Smooth parallax zoom on the image
-        gsap.fromTo(
+        const t = gsap.fromTo(
           img,
-          { scale: 1.15 },
+          { scale: 1.08 },
           {
             scale: 1,
             ease: 'none',
+            force3D: true,
             scrollTrigger: {
               trigger: section,
               start: 'top bottom',
               end: 'bottom top',
-              scrub: 1.5,
+              scrub: true,
+              invalidateOnRefresh: true,
             },
           }
         )
+        tweens.push(t)
       }
 
-      if (overlay) {
-        // Fade in the text overlay
-        gsap.fromTo(
-          overlay,
-          { opacity: 0 },
+      if (text) {
+        const t = gsap.fromTo(
+          text,
+          { opacity: 0, y: 30 },
           {
             opacity: 1,
+            y: 0,
+            ease: 'none',
+            force3D: true,
             scrollTrigger: {
               trigger: section,
-              start: 'top 60%',
-              end: 'center center',
-              scrub: 1,
+              start: 'top 50%',
+              end: 'top 20%',
+              scrub: true,
             },
           }
         )
+        tweens.push(t)
       }
     })
 
     return () => {
+      tweens.forEach((t) => t.kill())
       ScrollTrigger.getAll().forEach((t) => t.kill())
     }
   }, [])
 
   return (
-    <div>
+    <div ref={containerRef}>
       {galleryImages.map((image, i) => (
         <div
           key={i}
-          ref={(el) => { sectionRefs.current[i] = el }}
-          className="fullscreen-image-section"
+          className="fs-gallery-item"
         >
-          <img
-            src={image.src}
-            alt={image.caption}
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="fullscreen-image-overlay">
+          <div className="fs-gallery-img-wrapper">
+            <img
+              className="fs-gallery-img"
+              src={image.src}
+              alt={image.caption}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </div>
+          <div className="absolute inset-0 bg-black/25 pointer-events-none"></div>
+          <div className="fs-gallery-text">
             <p className="fullscreen-image-overlay-text">
               <em>{image.caption}</em>
             </p>
