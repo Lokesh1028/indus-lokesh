@@ -682,3 +682,15 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
 }
+
+/* ===== FEATURE CARDS CLEAN (No borders, shadow on hover) ===== */
+.feature-card-clean {
+  padding: 48px 40px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.feature-card-clean:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.04);
+  background: var(--color-white);
+}
