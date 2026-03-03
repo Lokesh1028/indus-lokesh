@@ -15,8 +15,6 @@ import Footer from '@/components/Footer'
 import BackToTop from '@/components/BackToTop'
 import ScrollAnimations from '@/components/ScrollAnimations'
 
-const HorizontalScroll = dynamic(() => import('@/components/HorizontalScroll'), { ssr: false })
-const OutdoorSlider = dynamic(() => import('@/components/OutdoorSlider'), { ssr: false })
 const FullscreenGallery = dynamic(() => import('@/components/FullscreenGallery'), { ssr: false })
 
 export default function Home() {
@@ -35,9 +33,6 @@ export default function Home() {
         <Clubhouse />
         <Amenities />
         <FullscreenGallery />
-        <HorizontalScroll />
-        <OutdoorSlider />
-        <div className="section-divider" />
         <Location />
         <ContactForm />
       </main>
