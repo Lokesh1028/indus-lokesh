@@ -67,7 +67,7 @@ const services = [
 
 export default function FullParallax() {
   return (
-    <section id="services" className="py-32 md:py-44 px-6 bg-[var(--color-bg-off)]">
+    <section id="services" className="py-12 md:py-20 px-6 bg-[var(--color-bg-off)]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <div className="tp-fade-bottom">
@@ -86,9 +86,12 @@ export default function FullParallax() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          data-scroll-skew-wave
+        >
           {services.map((s, i) => (
-            <div key={i} className={`tp-fade-bottom stagger-delay-${Math.min(i + 1, 6)} feature-card-clean group`}>
+            <div key={i} className="feature-card-clean group">
               <span className="text-[var(--color-accent)] mb-6 block transition-colors duration-300 group-hover:text-[var(--color-accent-hover)]">
                 {s.icon}
               </span>

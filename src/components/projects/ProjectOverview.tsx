@@ -9,7 +9,7 @@ const splitNumeric = (value: string): { target: string; suffix: string } => {
 
 export default function ProjectOverview({ project }: { project: Project }) {
   return (
-    <section className="py-28 md:py-36 px-6">
+    <section className="py-12 md:py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7">
           <div className="tp-fade-left">

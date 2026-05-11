@@ -3,6 +3,7 @@ import Preloader from '@/components/Preloader'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import IntroSection from '@/components/IntroSection'
+import FounderVision from '@/components/FounderVision'
 import ProjectsShowcase from '@/components/projects/ProjectsShowcase'
 import Clubhouse from '@/components/Clubhouse'
 import ImageGallery from '@/components/ImageGallery'
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         <IntroSection />
+        <FounderVision />
         <ProjectsShowcase />
         <Clubhouse />
         <ImageGallery />

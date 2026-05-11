@@ -4,7 +4,7 @@ export type ProjectGalleryItem = { src: string; alt: string; caption?: string }
 export type ProjectConnectivity = { time: string; unit: string; place: string }
 
 export type Project = {
-  slug: 'bliss-in-the-woods' | 'farm-hills'
+  slug: 'bliss-in-the-woods' | 'farm-hills' | 'indus-homes'
   name: string
   shortName: string
   partner: string
@@ -26,7 +26,7 @@ export type Project = {
   highlights: ProjectHighlight[]
   gallery: ProjectGalleryItem[]
   connectivity: ProjectConnectivity[]
-  videos?: { src: string; title: string; poster: string }[]
+  videos?: { src: string; title: string; poster: string; kind?: string; duration?: string }[]
 }
 
 export const projects: Project[] = [
@@ -47,10 +47,10 @@ export const projects: Project[] = [
     },
     heroMedia: {
       kind: 'video',
-      src: '/videos/bliss-in-the-woods/hero.mp4',
-      poster: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80',
+      src: '/videos/bliss-in-the-woods/walkthrough-1.mp4',
+      poster: '/images/bliss-in-the-woods/villa-exterior.png',
     },
-    cardImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80',
+    cardImage: '/images/bliss-in-the-woods/villa-exterior.png',
     overview: [
       'Bliss In The Woods is a premium villa community embraced by a 450-acre eco-tourism park — a rare living experience where sustainability, luxury and connectivity meet. Conceived and planned by the Bhosho Design Group, every villa is studded with views of open landscape and sky.',
       'A ten-minute drive from the Outer Ring Road, fifteen from the International Airport, and thirty from the Financial District, BIW is the right blend of expansive nature and city access. Naturally grown, chemical-free food is part of everyday living — fruits and vegetables spread across the project.',
@@ -119,34 +119,54 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80',
-        alt: 'Open meadows surrounding Bliss In The Woods',
-        caption: 'Embraced by 450 acres of eco-tourism park',
+        src: '/images/bliss-in-the-woods/villa-exterior.png',
+        alt: 'BIW villa exterior with king-size parking',
+        caption: 'King-size parking · plenty of room for the whole family',
       },
       {
-        src: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1400&q=80',
-        alt: 'Bamboo canopy walkway',
-        caption: 'A piece of heaven — the eco-tourism park',
+        src: '/images/bliss-in-the-woods/amphitheatre.png',
+        alt: 'Colossal amphitheatre at BIW',
+        caption: 'Colossal amphitheatre — a treat for your eyes',
       },
       {
-        src: 'https://images.unsplash.com/photo-1505819985416-2b6ca7704d09?w=1400&q=80',
-        alt: 'Central park lawn',
-        caption: 'Central park — all yours to wander around',
+        src: '/images/bliss-in-the-woods/theme-parks.png',
+        alt: 'Stunning hedge-maze theme parks',
+        caption: 'Stunning theme parks — the perfect getaways',
       },
       {
-        src: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1400&q=80',
-        alt: 'Designer pond at BIW',
-        caption: 'Beautiful ponds — blues are fun',
+        src: '/images/bliss-in-the-woods/open-space.png',
+        alt: '6+ acres of open space',
+        caption: '6+ acres of open space — room to wander',
       },
       {
-        src: 'https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?w=1400&q=80',
-        alt: 'Outhouse pavilion render',
-        caption: 'The outhouse — hangout with nature',
+        src: '/images/bliss-in-the-woods/villa-architectural.png',
+        alt: 'Customizable villa architectural render',
+        caption: 'Customizable villas — your home, your way',
       },
       {
-        src: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?w=1400&q=80',
-        alt: 'Natural luxury pool',
-        caption: 'Luxury pools — the splash of joy',
+        src: '/images/bliss-in-the-woods/living-room.png',
+        alt: 'Modern living room interior',
+        caption: 'Living room — designed for slow weekends',
+      },
+      {
+        src: '/images/bliss-in-the-woods/kitchen-dining.png',
+        alt: 'Open kitchen and dining',
+        caption: 'Kitchen and dining — open, lit, gathered',
+      },
+      {
+        src: '/images/bliss-in-the-woods/bedroom.png',
+        alt: 'Master bedroom interior',
+        caption: 'Bedroom — quiet textures, warm light',
+      },
+      {
+        src: '/images/bliss-in-the-woods/courtyard-pond.png',
+        alt: 'Outdoor courtyard with lily pond',
+        caption: 'Courtyard pond — a piece of stillness at home',
+      },
+      {
+        src: '/images/bliss-in-the-woods/balcony-view.png',
+        alt: 'Balcony with forest view',
+        caption: 'Balcony — long views, longer mornings',
       },
     ],
     connectivity: [
@@ -156,10 +176,167 @@ export const projects: Project[] = [
     ],
     videos: [
       {
-        src: '/videos/bliss-in-the-woods/tour.mp4',
-        title: 'Project Walkthrough',
-        poster:
-          'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1400&q=80',
+        src: '/videos/bliss-in-the-woods/walkthrough-1.mp4',
+        title: 'Project Walkthrough · I',
+        poster: '/images/bliss-in-the-woods/villa-exterior.png',
+        kind: 'Walkthrough',
+        duration: '0:30',
+      },
+      {
+        src: '/videos/bliss-in-the-woods/walkthrough-2.mp4',
+        title: 'Project Walkthrough · II',
+        poster: '/images/bliss-in-the-woods/living-room.png',
+        kind: 'Walkthrough',
+        duration: '0:30',
+      },
+      {
+        src: '/videos/bliss-in-the-woods/construction-1.mp4',
+        title: 'Site Progress · Update I',
+        poster: '/images/bliss-in-the-woods/open-space.png',
+        kind: 'Construction',
+        duration: '0:20',
+      },
+      {
+        src: '/videos/bliss-in-the-woods/construction-2.mp4',
+        title: 'Site Progress · Update II',
+        poster: '/images/bliss-in-the-woods/theme-parks.png',
+        kind: 'Construction',
+        duration: '0:30',
+      },
+    ],
+  },
+  {
+    slug: 'indus-homes',
+    name: 'Indus Homes',
+    shortName: 'Indus Homes',
+    partner: 'Indus Homes',
+    tagline: 'Completed luxury villa development rooted in transparency, quality and timely delivery',
+    status: 'Completed',
+    type: 'HMDA Approved Luxury Villa Project',
+    location: {
+      area: 'Pasumamula, Hayathnagar',
+      short: 'East Hyderabad',
+      full: 'Pasumamula, Hayathnagar, Rangareddy District, Telangana',
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Pasumamula%20Hayathnagar%20Rangareddy%20Telangana',
+      embedQuery: 'Pasumamula+Hayathnagar+Rangareddy+Telangana',
+    },
+    surveyNumbers: 'LP No. 000061/LO/LPG/HMDA/2021',
+    heroMedia: {
+      kind: 'video',
+      src: '/videos/indus-homes/indus-homes-video-01.mp4',
+      poster: '/images/indus-homes/indus-homes-01.jpg',
+    },
+    cardImage: '/images/indus-homes/indus-homes-01.jpg',
+    overview: [
+      'Indus Homes represents Sunil Reddy’s completed real-estate foundation: a customer-first villa development story built around transparency, value for money, quality construction and timely delivery. The project is positioned around Abhi’s Aloha, a premium luxury villa community in Pasumamula, Hayathnagar.',
+      'The development brings together HMDA-approved planning, practical connectivity and everyday community infrastructure: wide BT roads, underground cabling and drainage, avenue plantation, landscaped open spaces, children’s play areas and walking tracks. It reflects the Indus Homes belief that a home should feel extraordinary while remaining dependable, secure and easy to live in.',
+    ],
+    stats: [
+      { value: '16.1', label: 'Acres Property' },
+      { value: '240', label: 'Villa Units' },
+      { value: '3', label: 'BHK Premium Villas' },
+      { value: '1.22 Cr', label: 'Starting Price' },
+    ],
+    highlights: [
+      {
+        title: 'HMDA Approved Layout',
+        description:
+          'Approved under LP No. 000061/LO/LPG/HMDA/2021, giving the project a clear planning framework and stronger buyer confidence.',
+        icon: 'shield',
+      },
+      {
+        title: 'Luxury Villa Community',
+        description:
+          'A three-bedroom premium villa development in Pasumamula, created for families seeking an elevated East Hyderabad address.',
+        icon: 'home',
+      },
+      {
+        title: 'Quality Construction',
+        description:
+          'Indus Homes places construction quality at the front of every undertaking, with the goal of creating homes that last a lifetime.',
+        icon: 'sustain',
+      },
+      {
+        title: 'Timely Delivery Mindset',
+        description:
+          'The brand’s operating promise is discipline, management and delivery within committed timelines.',
+        icon: 'clock',
+      },
+      {
+        title: 'Planned Infrastructure',
+        description:
+          '40 ft main BT road, 30 ft internal BT roads, underground cabling, underground drainage and aesthetically designed street lighting.',
+        icon: 'road',
+      },
+      {
+        title: 'Green Community Amenities',
+        description:
+          'Avenue plantation, excellent landscaping, rain-water harvesting pits, children’s play area and walking track support a healthier environment.',
+        icon: 'leaf',
+      },
+    ],
+    gallery: [
+      {
+        src: '/images/indus-homes/indus-homes-01.jpg',
+        alt: 'Night front elevation of completed Indus Homes villa',
+        caption: 'Completed villa elevation · warm façade lighting and premium frontage',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-02.jpg',
+        alt: 'Angled front view of Indus Homes villa',
+        caption: 'Modern villa frontage with compound wall and private gate',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-03.jpg',
+        alt: 'Straight front elevation of Indus Homes villa',
+        caption: 'Full front elevation · balcony, steps and family-home scale',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-04.jpg',
+        alt: 'Corner street-side view of Indus Homes villa',
+        caption: 'Corner perspective showing the villa scale and street approach',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-05.jpg',
+        alt: 'Indus Homes construction-stage villa façade',
+        caption: 'Construction-stage façade · proof of execution on ground',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-06.jpg',
+        alt: 'Row of modern Indus Homes villas',
+        caption: 'Street view of adjacent modern villa elevations',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-07.jpg',
+        alt: 'Close front elevation of grey Indus Homes villa',
+        caption: 'Completed front elevation with grey cladding and clean lines',
+      },
+      {
+        src: '/images/indus-homes/indus-homes-08.jpg',
+        alt: 'Wide angled view of Indus Homes villa pair',
+        caption: 'Wide angle view of completed villa pair and street frontage',
+      },
+    ],
+    connectivity: [
+      { time: '2.8', unit: 'Kms', place: 'NH65' },
+      { time: '5.6', unit: 'Kms', place: 'Hayathnagar' },
+      { time: '12', unit: 'Kms', place: 'Nagole' },
+      { time: '18', unit: 'Mins', place: 'LB Nagar' },
+    ],
+    videos: [
+      {
+        src: '/videos/indus-homes/indus-homes-video-01.mp4',
+        title: 'Completed Villa Walkthrough · I',
+        poster: '/images/indus-homes/indus-homes-01.jpg',
+        kind: 'Walkthrough',
+        duration: '0:19',
+      },
+      {
+        src: '/videos/indus-homes/indus-homes-video-02.mp4',
+        title: 'Completed Villa Walkthrough · II',
+        poster: '/images/indus-homes/indus-homes-07.jpg',
+        kind: 'Walkthrough',
+        duration: '0:27',
       },
     ],
   },

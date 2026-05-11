@@ -13,8 +13,7 @@ export default function HeroVideo() {
     return () => v.removeEventListener('error', onError)
   }, [])
 
-  const poster =
-    'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80'
+  const poster = '/images/bliss-in-the-woods/villa-exterior.png'
 
   return (
     <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-black">
@@ -31,11 +30,8 @@ export default function HeroVideo() {
           className="w-full h-full object-cover"
           poster={poster}
         >
-          <source src="/videos/bliss-in-the-woods/hero.mp4" type="video/mp4" />
-          <source
-            src="https://static.videezy.com/system/resources/previews/000/041/409/original/Stock-Footage-Luxury-Home-Exterior.mp4"
-            type="video/mp4"
-          />
+          <source src="/videos/bliss-in-the-woods/walkthrough-1.mp4" type="video/mp4" />
+          <source src="/videos/bliss-in-the-woods/walkthrough-2.mp4" type="video/mp4" />
         </video>
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white"></div>

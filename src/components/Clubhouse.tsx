@@ -34,7 +34,7 @@ const pillars = [
 
 export default function Clubhouse() {
   return (
-    <section id="why" className="py-32 md:py-44 px-6">
+    <section id="why" className="py-12 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
           <div className="tp-fade-bottom">

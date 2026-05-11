@@ -55,7 +55,7 @@ export default function Location() {
   const view = mapViews.find((v) => v.id === active) ?? mapViews[0]
 
   return (
-    <section id="location" className="py-32 md:py-44 px-6 bg-[var(--color-bg-off)]">
+    <section id="location" className="py-12 md:py-20 px-6 bg-[var(--color-bg-off)]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div>

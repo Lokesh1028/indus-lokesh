@@ -11,7 +11,7 @@ export default function ProjectGallery({ project }: { project: Project }) {
     setLightboxIndex((i) => (i === null ? null : (i + 1) % project.gallery.length))
 
   return (
-    <section className="py-28 md:py-36 px-6">
+    <section className="py-12 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-xl">
           <div className="tp-fade-left">
@@ -35,12 +35,14 @@ export default function ProjectGallery({ project }: { project: Project }) {
               'lg:col-span-12 h-[420px] md:h-[560px]',
             ]
             const className = layouts[i % layouts.length]
+            const dir = ['right', 'left', 'up', 'down', 'right', 'center'][i % 6]
             return (
               <button
                 key={i}
                 type="button"
                 onClick={() => setLightboxIndex(i)}
-                className={`tp-scale-up stagger-delay-${Math.min((i % 6) + 1, 6)} ${className} project-gallery-tile group`}
+                data-scroll-clip={dir}
+                className={`${className} project-gallery-tile group`}
                 aria-label={`Open ${item.alt}`}
               >
                 <div className="parallax-img-wrapper h-full w-full">

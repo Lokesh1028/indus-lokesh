@@ -24,8 +24,8 @@ export default function ProjectHero({ project }: { project: Project }) {
   }, [isVideo])
 
   return (
-    <section className="project-hero">
-      <div className="project-hero-media">
+    <section className="project-hero" data-scroll-zoom-host>
+      <div className="project-hero-media" data-scroll-zoom data-scroll-zoom-to="1.22">
         {isVideo && !videoFailed ? (
           <>
             <img
@@ -57,7 +57,7 @@ export default function ProjectHero({ project }: { project: Project }) {
         <div className="project-hero-vignette" />
       </div>
 
-      <div className="project-hero-content">
+      <div className="project-hero-content" data-scroll-parallax-y="0.18">
         <nav className="project-hero-breadcrumbs" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span>/</span>

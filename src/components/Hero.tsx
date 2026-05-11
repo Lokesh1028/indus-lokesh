@@ -1,24 +1,29 @@
 'use client'
 import Link from 'next/link'
+import { smoothScrollTo } from '@/components/SmoothScroll'
 
 export default function Hero() {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+  const scrollTo = (id: string) => smoothScrollTo(`#${id}`)
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <section
+      id="hero"
+      data-scroll-zoom-host
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div className="absolute inset-0 z-0" data-scroll-zoom data-scroll-zoom-to="1.18">
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
-          alt="Forest landscape representing Bliss In The Woods"
+          src="/images/bliss-in-the-woods/villa-exterior.png"
+          alt="Bliss In The Woods villa exterior"
           className="w-full h-full object-cover hero-kenburns"
         />
         <div className="absolute inset-0 bg-black/45"></div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
+      <div
+        className="relative z-10 text-center px-6 max-w-7xl mx-auto"
+        data-scroll-parallax-y="0.2"
+      >
         <div className="tp-fade-bottom">
           <p className="font-body text-[11px] font-medium tracking-[3px] uppercase text-white/55 mb-10">
             Vishwaprerana Creative Homes · Bliss In The Woods · Farm Hills
@@ -32,7 +37,7 @@ export default function Hero() {
               the
               <span className="hero-inline-img mx-3 lg:mx-5">
                 <img
-                  src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=400&q=80"
+                  src="/images/bliss-in-the-woods/courtyard-pond.png"
                   alt=""
                 />
               </span>

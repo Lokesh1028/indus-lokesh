@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { smoothScrollTop } from '@/components/SmoothScroll'
 
 export default function BackToTop() {
   const [visible, setVisible] = useState(false)
@@ -12,9 +13,7 @@ export default function BackToTop() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const scrollToTop = () => smoothScrollTop()
 
   return (
     <button

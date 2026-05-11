@@ -3,7 +3,7 @@ import type { Project } from '@/data/projects'
 
 export default function ProjectLocation({ project }: { project: Project }) {
   return (
-    <section className="py-28 md:py-36 px-6 bg-[var(--color-bg-off)]">
+    <section className="py-12 md:py-20 px-6 bg-[var(--color-bg-off)]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>

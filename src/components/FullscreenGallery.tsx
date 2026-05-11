@@ -14,7 +14,7 @@ const galleryImages = [
   },
   {
     src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1400&q=75',
-    caption: 'Your trusted real estate partner in Telangana',
+    caption: 'Vision-led landlord-share partnerships in Telangana',
   },
 ]
 

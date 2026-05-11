@@ -3,37 +3,19 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const amenities = [
-  {
-    name: '450-Acre Eco-Tourism Park',
-    image: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1200&q=80',
-  },
-  {
-    name: '50,000 sqft Imperial Clubhouse',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80',
-  },
-  {
-    name: 'Central Park & Two Ponds',
-    image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1200&q=80',
-  },
-  {
-    name: 'Theme Parks Per Street',
-    image: 'https://images.unsplash.com/photo-1505819985416-2b6ca7704d09?w=1200&q=80',
-  },
-  {
-    name: 'Pet Park & Amphitheatre',
-    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80',
-  },
-  {
-    name: 'Luxury & Natural Pools',
-    image: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?w=1200&q=80',
-  },
+  { name: '450-Acre Eco-Tourism Park', image: '/images/bliss-in-the-woods/open-space.png' },
+  { name: 'Customizable Villas', image: '/images/bliss-in-the-woods/villa-architectural.png' },
+  { name: 'Colossal Amphitheatre', image: '/images/bliss-in-the-woods/amphitheatre.png' },
+  { name: 'Stunning Theme Parks', image: '/images/bliss-in-the-woods/theme-parks.png' },
+  { name: 'Designer Interiors', image: '/images/bliss-in-the-woods/living-room.png' },
+  { name: 'Courtyards & Long Views', image: '/images/bliss-in-the-woods/courtyard-pond.png' },
 ]
 
 export default function Amenities() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="amenities" className="py-32 md:py-44 px-6 bg-[var(--color-bg-off)]">
+    <section id="amenities" className="py-12 md:py-20 px-6 bg-[var(--color-bg-off)]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <div className="tp-fade-bottom">
@@ -76,7 +58,11 @@ export default function Amenities() {
           </div>
 
           <div className="tp-fade-right hidden lg:block sticky top-32">
-            <div className="amenity-image-container" style={{ height: '560px' }}>
+            <div
+              className="amenity-image-container"
+              style={{ height: '560px' }}
+              data-scroll-parallax-y="0.08"
+            >
               {amenities.map((amenity, i) => (
                 <img
                   key={i}

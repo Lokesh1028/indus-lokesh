@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import { smoothScrollTo } from '@/components/SmoothScroll'
 
 type NavLink =
   | { label: string; id: string; href?: never }
@@ -23,16 +24,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Force "scrolled" styling on non-home pages so header is always readable.
   const headerScrolled = scrolled || !isHome
 
   const navLinks: NavLink[] = [
     { label: 'Home', id: 'hero' },
-    { label: 'About', id: 'intro' },
+    { label: 'Founder', id: 'founder' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Services', id: 'services' },
-    { label: 'Amenities', id: 'amenities' },
-    { label: 'Location', id: 'location' },
     { label: 'Contact', id: 'contact' },
   ]
 
@@ -42,8 +39,7 @@ export default function Header() {
       router.push(`/#${id}`)
       return
     }
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    smoothScrollTo(`#${id}`)
   }
 
   const handleRoute = (href: string) => {
@@ -102,7 +98,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Offcanvas */}
       <div className={`offcanvas-overlay ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)} />
       <div className={`offcanvas-menu ${menuOpen ? 'open' : ''}`}>
         <div className="flex items-center justify-between mb-20">

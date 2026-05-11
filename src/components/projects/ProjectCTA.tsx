@@ -4,7 +4,7 @@ import type { Project } from '@/data/projects'
 
 export default function ProjectCTA({ project }: { project: Project }) {
   return (
-    <section className="py-28 md:py-36 px-6 bg-[var(--color-black)] text-white">
+    <section className="py-12 md:py-20 px-6 bg-[var(--color-black)] text-white">
       <div className="max-w-5xl mx-auto text-center">
         <div className="tp-fade-bottom">
           <span className="section-subtitle" style={{ color: 'var(--color-accent)' }}>

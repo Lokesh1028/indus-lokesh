@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import { smoothScrollTo } from '@/components/SmoothScroll'
 
 type FooterLink =
   | { label: string; id: string; href?: never }
@@ -16,17 +17,13 @@ export default function Footer() {
       router.push(`/#${id}`)
       return
     }
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    smoothScrollTo(`#${id}`)
   }
 
   const links: FooterLink[] = [
     { label: 'Home', id: 'hero' },
-    { label: 'About', id: 'intro' },
+    { label: 'Founder', id: 'founder' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Services', id: 'services' },
-    { label: 'Amenities', id: 'amenities' },
-    { label: 'Location', id: 'location' },
     { label: 'Contact', id: 'contact' },
   ]
 

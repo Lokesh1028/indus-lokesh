@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard'
 
 export default function ProjectsShowcase() {
   return (
-    <section id="projects" className="py-32 md:py-44 px-6 bg-[var(--color-bg-warm)]">
+    <section id="projects" className="py-12 md:py-20 px-6 bg-[var(--color-bg-warm)]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-20">
           <div className="max-w-2xl">
@@ -33,9 +33,12 @@ export default function ProjectsShowcase() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-          {projects.map((project, i) => (
-            <div key={project.slug} className={`tp-fade-bottom stagger-delay-${i + 1}`}>
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12"
+          data-scroll-tilt-cards
+        >
+          {projects.map((project) => (
+            <div key={project.slug}>
               <ProjectCard project={project} variant="showcase" />
             </div>
           ))}

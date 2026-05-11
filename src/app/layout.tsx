@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import SmoothScroll from '@/components/SmoothScroll'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'VipHomes | Premium Real Estate in Narsingi, Gandipet & Hyderabad',
-  description: 'Vishwaprerana Creative Homes (OPC) Pvt Ltd — premium residential developments in Narsingi, Gandipet, Kokapet & Hyderabad. Your trusted real estate partner in Telangana.',
+  title: 'Sunil Reddy | VipHomes Partner Projects & Real Estate Vision',
+  description: 'Sunil Reddy Kondakrindi — founder of Indus Homes and landowner-share partner in premium Telangana developments including Bliss In The Woods, Farm Hills and Indus Homes.',
 }
 
 export default function RootLayout({
@@ -13,7 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }

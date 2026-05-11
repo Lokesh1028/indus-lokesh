@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { getProject } from '@/data/projects'
+import { smoothScrollTo } from '@/components/SmoothScroll'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,8 +22,7 @@ export default function ContactForm() {
         ? prev
         : { ...prev, message: `I'm interested in ${project.name}. Please share availability and the next site visit slot.` }
     )
-    const el = document.getElementById('contact')
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    smoothScrollTo('#contact')
   }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,7 +32,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-32 md:py-44 px-6">
+    <section id="contact" className="py-12 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
           </div>
 
           <div className="tp-fade-right">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-scroll-rise>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <input
                   type="text"
