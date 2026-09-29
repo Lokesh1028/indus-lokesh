@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="tp-fade-bottom stagger-delay-1">
-          <h1 className="hero-title mb-10">
+          <h1 className="hero-title mb-14">
             <em>Living amidst</em>
             <br />
             <span className="inline-flex items-center">
@@ -45,14 +45,7 @@ export default function Hero() {
             </span>
           </h1>
         </div>
-        <div className="tp-fade-bottom stagger-delay-2">
-          <p className="font-body text-[15px] font-light text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed tracking-wide">
-            Partnered with two developments worth a weekend visit — <em>Bliss In The Woods</em>,
-            a forest-wrapped villa community on the ORR corridor, and <em>Farm Hills</em>, a
-            verified farm-villa-plot layout in Rangareddy district.
-          </p>
-        </div>
-        <div className="tp-fade-bottom stagger-delay-3 flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="tp-fade-bottom stagger-delay-2 flex flex-col sm:flex-row gap-5 justify-center">
           <Link href="/projects" className="btn-luxury btn-luxury-filled">
             Explore Projects
           </Link>

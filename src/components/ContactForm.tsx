@@ -46,8 +46,8 @@ export default function ContactForm() {
             </div>
             <div className="tp-fade-left stagger-delay-2">
               <p className="section-text mb-14">
-                Curious about Bliss In The Woods or Farm Hills? Drop your details and we&apos;ll
-                set up a guided site visit and answer everything from pricing to paperwork.
+                Curious about any of our projects? Drop your details and we&apos;ll set up a
+                guided site visit and answer everything from pricing to paperwork.
               </p>
             </div>
 

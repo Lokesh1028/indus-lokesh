@@ -33,10 +33,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="lg:col-span-1">
             <h3 className="font-heading text-3xl mb-3 font-normal">VipHomes</h3>
-            <p className="font-body text-white/25 text-[10px] font-medium tracking-[2px] uppercase mb-8">Vishwaprerana Creative Homes · Est. 2026</p>
+            <p className="font-body text-white/25 text-[10px] font-medium tracking-[2px] uppercase mb-8">Vishwaprerana Creative Homes · Est. 2022</p>
             <p className="font-body text-white/40 text-[14px] font-light leading-relaxed">
-              Partnering on premium developments across Telangana — Bliss In The Woods near the
-              ORR corridor, and Farm Hills farm villa plots in Rangareddy district.
+              Own developments &amp; partnered developments across Telangana — Bliss In The
+              Woods near the ORR corridor, and Farm Hills farm villa plots in Rangareddy district.
             </p>
           </div>
 

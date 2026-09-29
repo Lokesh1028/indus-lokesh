@@ -9,7 +9,7 @@ export default function ProjectsListPage() {
         <div className="projects-list-hero-inner">
           <div className="tp-fade-bottom">
             <span className="section-subtitle" style={{ color: 'var(--color-accent)' }}>
-              Our Partner Projects
+              Our Projects
             </span>
           </div>
           <div className="tp-fade-bottom stagger-delay-1">
@@ -19,9 +19,9 @@ export default function ProjectsListPage() {
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
             <p className="font-body text-[16px] font-light text-[var(--color-text)] max-w-2xl leading-relaxed">
-              VipHomes partners with developments we&apos;d genuinely visit on a weekend — a
-              forest-wrapped villa community on the ORR corridor, and a verified farm-villa-plot
-              layout in the Rangareddy land belt.
+              VipHomes builds its own developments and partners on the ones we&apos;d genuinely
+              visit on a weekend — a forest-wrapped villa community on the ORR corridor, and a
+              verified farm-villa-plot layout in the Rangareddy land belt.
             </p>
           </div>
         </div>

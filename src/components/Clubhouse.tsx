@@ -2,8 +2,8 @@
 
 const pillars = [
   {
-    title: 'Curated Partnerships',
-    desc: 'We only represent developments we\'ve walked, vetted and would visit on a weekend ourselves — Nest Makers\' Bliss In The Woods, and Assured Property\'s Farm Hills.',
+    title: 'Own & Partnered Developments',
+    desc: 'Alongside our own developments, we only partner on projects we\'ve walked, vetted and would visit on a weekend ourselves — Nest Makers\' Bliss In The Woods, and Assured Property\'s Farm Hills.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -47,9 +47,9 @@ export default function Clubhouse() {
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
             <p className="font-body text-[16px] font-normal text-[var(--color-charcoal)] leading-relaxed mx-auto" style={{ maxWidth: '720px' }}>
-              Three principles guide every project we represent — partnerships we&apos;ve
-              personally vetted, communities that lean into nature, and the local knowledge
-              of a Narsingi-based team.
+              Three principles guide every project we take on — our own developments and
+              partnerships we&apos;ve personally vetted, communities that lean into nature, and
+              the local knowledge of a Narsingi-based team.
             </p>
           </div>
         </div>

@@ -120,8 +120,8 @@ export const projects: Project[] = [
     gallery: [
       {
         src: '/images/bliss-in-the-woods/villa-exterior.png',
-        alt: 'BIW villa exterior with king-size parking',
-        caption: 'King-size parking · plenty of room for the whole family',
+        alt: 'Bliss In The Woods villa exterior',
+        caption: 'Villa exterior · open landscape and sky all around',
       },
       {
         src: '/images/bliss-in-the-woods/amphitheatre.png',

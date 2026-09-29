@@ -38,7 +38,7 @@ export default function ImageGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 max-w-xl">
           <div className="tp-fade-left">
-            <span className="section-subtitle">Our Partner Projects</span>
+            <span className="section-subtitle">Our Projects</span>
           </div>
           <div className="tp-fade-left stagger-delay-1">
             <h3 className="section-title text-4xl md:text-5xl leading-tight">

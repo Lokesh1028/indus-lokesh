@@ -11,22 +11,22 @@ const credentials = [
 
 const principles = [
   {
-    label: 'Mission',
+    label: 'Our Mission',
     title: 'Challenge the usual way real estate is built and sold.',
     body:
-      'Sunil Reddy’s work began with a simple belief: real estate should not be treated as a routine transaction. It should be designed, planned and delivered with the care of a long-term institution. The mission is to make every customer journey more personal, transparent and seamless.',
+      'At VipHomes, we began with a simple belief: real estate should not be treated as a routine transaction. It should be designed, planned and delivered with the care of a long-term institution. Our mission is to make every customer journey more personal, transparent and seamless.',
   },
   {
-    label: 'Vision',
+    label: 'Our Vision',
     title: 'Create projects that become part of India’s next urban story.',
     body:
-      'His vision is to build developments that do more than occupy land. They should improve how people live, use space responsibly and raise the standard for what Indian real estate can become over the next generation.',
+      'Our vision is to build developments that do more than occupy land. They should improve how people live, use space responsibly and raise the standard for what Indian real estate can become over the next generation.',
   },
   {
-    label: 'Design belief',
+    label: 'Our Design Belief',
     title: 'A property can be both a business and a work of art.',
     body:
-      'For Sunil, architecture is not decoration added at the end. It is the core of the project. Nature, movement, light, engineering and daily comfort all have to work together before a space can feel truly complete.',
+      'At VipHomes, we believe architecture is not decoration added at the end. It is the core of the project. Nature, movement, light, engineering and daily comfort all have to work together before a space can feel truly complete.',
   },
 ]
 
@@ -42,9 +42,6 @@ export default function FounderVision() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 lg:gap-24 items-start mb-16 lg:mb-24">
           <div>
-            <div className="tp-fade-left">
-              <span className="section-subtitle">Landowner Partner</span>
-            </div>
             <div className="tp-fade-left stagger-delay-1">
               <h2 className="section-title text-5xl md:text-7xl leading-tight mb-8">
                 Sunil Reddy<br />
@@ -110,12 +107,12 @@ export default function FounderVision() {
 
         <div className="founder-alternating-grid" data-scroll-rise>
           <div className="tp-fade-left founder-process-card founder-process-feature">
-            <span className="section-subtitle">How the Vision Takes Shape</span>
+            <span className="section-subtitle">Our Project Approach</span>
             <h3 className="font-heading text-4xl md:text-5xl text-[var(--color-black)] leading-tight font-normal mb-8">
               Big ideas only matter when the execution can carry them.
             </h3>
             <p className="section-text mb-8">
-              Sunil’s project approach comes from months of discussion, revision and disciplined
+              Our project approach comes from months of discussion, revision and disciplined
               coordination. The ambition may be large, but the work is practical: assemble the
               right team, test the idea from every angle and keep refining until the project can
               stand on its own.
@@ -141,24 +138,24 @@ export default function FounderVision() {
           </div>
 
           <div className="tp-fade-left stagger-delay-2 founder-legacy-panel lg:col-span-2">
-            <span className="section-subtitle">Architectural Ambition</span>
+            <span className="section-subtitle">Our Architectural Ambition</span>
             <h3 className="font-heading text-4xl md:text-5xl text-white leading-tight font-normal mb-8">
               The larger dream is to build projects that make India look forward.
             </h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
               <p>
-                Sunil’s vision for Indian real estate is influenced by the scale and confidence of
-                global landmarks. He believes India can create residential and mixed-use projects
-                that combine height, elegance, engineering discipline and a strong connection to
-                nature.
+                Our vision for Indian real estate is influenced by the scale and confidence of
+                global landmarks. At VipHomes, we believe India can create residential and
+                mixed-use projects that combine height, elegance, engineering discipline and a
+                strong connection to nature.
               </p>
               <p>
-                The skyscraper idea in his vision is not only about height. It is about ambition:
+                The skyscraper idea in our vision is not only about height. It is about ambition:
                 better land use in crowded cities, less pressure on horizontal expansion and
                 architecture that can become a point of pride for the country.
               </p>
               <p>
-                That same thinking guides the projects showcased here. Whether the development is
+                That same thinking guides every VipHomes project. Whether the development is
                 a villa community, farm-land project or future landmark, the goal is to build with
                 sustainability, design quality and long-term value at the center.
               </p>

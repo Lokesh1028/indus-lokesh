@@ -3,8 +3,8 @@ import SmoothScroll from '@/components/SmoothScroll'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Sunil Reddy | VipHomes Partner Projects & Real Estate Vision',
-  description: 'Sunil Reddy Kondakrindi — founder of Indus Homes and landowner-share partner in premium Telangana developments including Bliss In The Woods, Farm Hills and Indus Homes.',
+  title: 'VipHomes | Our Projects & Real Estate Vision',
+  description: 'VipHomes (Vishwaprerana Creative Homes) — own and partnered premium developments across Telangana, including Bliss In The Woods, Farm Hills and Indus Homes.',
 }
 
 export default function RootLayout({

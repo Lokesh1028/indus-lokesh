@@ -3,7 +3,7 @@
 const services = [
   {
     title: 'Project Discovery',
-    desc: 'We walk you through Bliss In The Woods and Farm Hills with the same context we have — what each project is for, who it suits, and what the trade-offs are.',
+    desc: 'We\'ll walk you through our projects with the same context we have — what each project is for, who it suits, and what the trade-offs are.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8" />
@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: 'Site Visits',
-    desc: 'Guided visits to BIW (ORR corridor) and Farm Hills (Nedunur, Kandukur Mandal) — at a time that works for you, with no high-pressure pitch.',
+    desc: 'Guided visits across our projects — at a time that works for you, with no high-pressure pitch.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -23,7 +23,7 @@ const services = [
   },
   {
     title: 'Plot & Villa Selection',
-    desc: 'Help shortlisting the right unit — Farm Hills plots by survey number and orientation, BIW villas by phase, vastu, view and proximity to amenities.',
+    desc: 'Help shortlisting the right unit — plots by survey number and orientation, villas by phase, vastu, view and proximity to amenities.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: 'Documentation Support',
-    desc: 'We coordinate with the developer and trusted legal partners on title verification, agreements and registration — so the paperwork stays clean.',
+    desc: 'We coordinate with our development teams and trusted legal partners on title verification, agreements and registration — so the paperwork stays clean.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -46,7 +46,7 @@ const services = [
   },
   {
     title: 'Investment Consulting',
-    desc: 'Honest read on what a Farm Hills plot or a BIW villa is likely to mean for you — second home, weekend getaway, or longer-term land hold.',
+    desc: 'Honest read on what a plot or villa in any of our projects is likely to mean for you — second home, weekend getaway, or longer-term land hold.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 3v18h18" />
@@ -80,8 +80,8 @@ export default function FullParallax() {
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
             <p className="section-text max-w-2xl mx-auto">
-              Six things we actually do for buyers exploring Bliss In The Woods and Farm
-              Hills — no fluff, no hidden fees.
+              Six things we actually do for buyers exploring our projects — no fluff, no
+              hidden fees.
             </p>
           </div>
         </div>
