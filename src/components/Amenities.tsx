@@ -3,12 +3,12 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const amenities = [
-  { name: '450-Acre Eco-Tourism Park', image: '/images/bliss-in-the-woods/open-space.png' },
-  { name: 'Customizable Villas', image: '/images/bliss-in-the-woods/villa-architectural.png' },
-  { name: 'Colossal Amphitheatre', image: '/images/bliss-in-the-woods/amphitheatre.png' },
-  { name: 'Stunning Theme Parks', image: '/images/bliss-in-the-woods/theme-parks.png' },
-  { name: 'Designer Interiors', image: '/images/bliss-in-the-woods/living-room.png' },
-  { name: 'Courtyards & Long Views', image: '/images/bliss-in-the-woods/courtyard-pond.png' },
+  { name: '450-Acre Eco-Tourism Park', image: '/images/bliss-in-the-woods/open-space.webp' },
+  { name: 'Customizable Villas', image: '/images/bliss-in-the-woods/villa-architectural.webp' },
+  { name: 'Colossal Amphitheatre', image: '/images/bliss-in-the-woods/amphitheatre.webp' },
+  { name: 'Stunning Theme Parks', image: '/images/bliss-in-the-woods/theme-parks.webp' },
+  { name: 'Designer Interiors', image: '/images/bliss-in-the-woods/living-room.webp' },
+  { name: 'Courtyards & Long Views', image: '/images/bliss-in-the-woods/courtyard-pond.webp' },
 ]
 
 export default function Amenities() {

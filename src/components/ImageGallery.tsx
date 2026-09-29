@@ -3,14 +3,14 @@ import Link from 'next/link'
 
 const images = [
   {
-    src: '/images/bliss-in-the-woods/villa-exterior.png',
+    src: '/images/bliss-in-the-woods/villa-exterior.webp',
     alt: 'Bliss In The Woods — villa exterior',
     label: 'Bliss In The Woods',
     href: '/projects/bliss-in-the-woods',
     className: 'col-span-1 h-[400px]',
   },
   {
-    src: '/images/bliss-in-the-woods/amphitheatre.png',
+    src: '/images/bliss-in-the-woods/amphitheatre.webp',
     alt: 'Bliss In The Woods — colossal amphitheatre',
     label: 'Colossal Amphitheatre',
     href: '/projects/bliss-in-the-woods',

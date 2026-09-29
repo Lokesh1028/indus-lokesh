@@ -13,7 +13,7 @@ export default function HeroVideo() {
     return () => v.removeEventListener('error', onError)
   }, [])
 
-  const poster = '/images/bliss-in-the-woods/villa-exterior.png'
+  const poster = '/images/bliss-in-the-woods/villa-exterior.webp'
 
   return (
     <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-black">

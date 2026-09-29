@@ -183,7 +183,7 @@ img {
 .founder-legacy-panel {
   background:
     linear-gradient(135deg, rgba(26, 26, 26, 0.94), rgba(44, 44, 44, 0.92)),
-    url('/images/bliss-in-the-woods/villa-architectural.png') center/cover;
+    url('/images/bliss-in-the-woods/villa-architectural.webp') center/cover;
   padding: clamp(34px, 6vw, 72px);
   color: rgba(255, 255, 255, 0.68);
   position: relative;

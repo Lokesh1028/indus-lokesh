@@ -25,7 +25,6 @@ export default function SmoothScroll() {
       smooth: 1.4,
       effects: true,
       smoothTouch: 0.1,
-      normalizeScroll: true,
       ignoreMobileResize: true,
     })
 

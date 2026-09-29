@@ -13,8 +13,11 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-0" data-scroll-zoom data-scroll-zoom-to="1.18">
         <img
-          src="/images/bliss-in-the-woods/villa-exterior.png"
+          src="/images/bliss-in-the-woods/villa-exterior.webp"
+          srcSet="/images/bliss-in-the-woods/villa-exterior-1600.webp 1600w, /images/bliss-in-the-woods/villa-exterior.webp 2974w"
+          sizes="100vw"
           alt="Bliss In The Woods villa exterior"
+          decoding="async"
           className="w-full h-full object-cover hero-kenburns"
         />
         <div className="absolute inset-0 bg-black/45"></div>
@@ -37,7 +40,7 @@ export default function Hero() {
               the
               <span className="hero-inline-img mx-3 lg:mx-5">
                 <img
-                  src="/images/bliss-in-the-woods/courtyard-pond.png"
+                  src="/images/bliss-in-the-woods/courtyard-pond-thumb.webp"
                   alt=""
                 />
               </span>
