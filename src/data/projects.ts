@@ -1,15 +1,10 @@
 export type ProjectStat = { value: string; label: string }
-export type ProjectHighlight = {
-  title: string
-  description: string
-  icon: string
-}
+export type ProjectHighlight = { title: string; description: string; icon: string }
 export type ProjectGalleryItem = { src: string; alt: string; caption?: string }
 export type ProjectConnectivity = { time: string; unit: string; place: string }
 
 export type Project = {
-  slug:
-    'vip-creative-homes' | 'bliss-in-the-woods' | 'farm-hills' | 'indus-homes'
+  slug: 'vip-creative-homes' | 'bliss-in-the-woods' | 'farm-hills' | 'indus-homes'
   name: string
   shortName: string
   partner: string
@@ -24,8 +19,6 @@ export type Project = {
     embedQuery: string
   }
   surveyNumbers?: string
-  referenceLabel?: string
-  imageryNote?: string
   heroMedia: { kind: 'video' | 'image'; src: string; poster: string }
   cardImage: string
   overview: string[]
@@ -33,13 +26,7 @@ export type Project = {
   highlights: ProjectHighlight[]
   gallery: ProjectGalleryItem[]
   connectivity: ProjectConnectivity[]
-  videos?: {
-    src: string
-    title: string
-    poster: string
-    kind?: string
-    duration?: string
-  }[]
+  videos?: { src: string; title: string; poster: string; kind?: string; duration?: string }[]
 }
 
 export const projects: Project[] = [
@@ -83,7 +70,7 @@ export const projects: Project[] = [
     name: 'Bliss In The Woods',
     shortName: 'BIW',
     partner: 'Nest Makers',
-    tagline: 'Villa living, connected to nature',
+    tagline: 'Something like never-before',
     status: 'Ongoing',
     type: 'Premium Villa Community',
     location: {
@@ -258,19 +245,17 @@ export const projects: Project[] = [
     name: 'Indus Homes',
     shortName: 'Indus Homes',
     partner: 'Indus Homes',
-    tagline: 'Completed villas, thoughtfully built',
+    tagline: 'Completed luxury villa development rooted in transparency, quality and timely delivery',
     status: 'Completed',
     type: 'HMDA Approved Luxury Villa Project',
     location: {
       area: 'Pasumamula, Hayathnagar',
       short: 'East Hyderabad',
       full: 'Pasumamula, Hayathnagar, Rangareddy District, Telangana',
-      mapsUrl:
-        'https://www.google.com/maps/search/?api=1&query=Pasumamula%20Hayathnagar%20Rangareddy%20Telangana',
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Pasumamula%20Hayathnagar%20Rangareddy%20Telangana',
       embedQuery: 'Pasumamula+Hayathnagar+Rangareddy+Telangana',
     },
     surveyNumbers: 'LP No. 000061/LO/LPG/HMDA/2021',
-    referenceLabel: 'Layout Approval Reference',
     heroMedia: {
       kind: 'video',
       src: '/videos/indus-homes/indus-homes-video-01.mp4',
@@ -278,14 +263,14 @@ export const projects: Project[] = [
     },
     cardImage: '/images/indus-homes/indus-homes-01.jpg',
     overview: [
-      'Indus Homes is a completed villa development in Pasumamula, Hayathnagar, shaped around practical family living and quality construction. It forms part of the experience behind VIP Homes and its approach to residential development.',
+      'Indus Homes represents Sunil Reddy’s completed real-estate foundation: a customer-first villa development story built around transparency, value for money, quality construction and timely delivery. The project is positioned around Abhi’s Aloha, a premium luxury villa community in Pasumamula, Hayathnagar.',
       'The development brings together HMDA-approved planning, practical connectivity and everyday community infrastructure: wide BT roads, underground cabling and drainage, avenue plantation, landscaped open spaces, children’s play areas and walking tracks. It reflects the Indus Homes belief that a home should feel extraordinary while remaining dependable, secure and easy to live in.',
     ],
     stats: [
       { value: '16.1', label: 'Acres Property' },
       { value: '240', label: 'Villa Units' },
       { value: '3', label: 'BHK Premium Villas' },
-      { value: 'Completed', label: 'Project Status' },
+      { value: '1.22 Cr', label: 'Starting Price' },
     ],
     highlights: [
       {
@@ -329,8 +314,7 @@ export const projects: Project[] = [
       {
         src: '/images/indus-homes/indus-homes-01.jpg',
         alt: 'Night front elevation of completed Indus Homes villa',
-        caption:
-          'Completed villa elevation · warm façade lighting and premium frontage',
+        caption: 'Completed villa elevation · warm façade lighting and premium frontage',
       },
       {
         src: '/images/indus-homes/indus-homes-02.jpg',
@@ -345,8 +329,7 @@ export const projects: Project[] = [
       {
         src: '/images/indus-homes/indus-homes-04.jpg',
         alt: 'Corner street-side view of Indus Homes villa',
-        caption:
-          'Corner perspective showing the villa scale and street approach',
+        caption: 'Corner perspective showing the villa scale and street approach',
       },
       {
         src: '/images/indus-homes/indus-homes-05.jpg',
@@ -394,12 +377,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'farm-hills',
-    imageryNote:
-      'Illustrative landscape imagery. These images are not photographs of the project site.',
     name: 'Farm Hills',
     shortName: 'Farm Hills',
     partner: 'Assured Property',
-    tagline: 'Space for a slower way of life',
+    tagline: 'Your getaway to a great lifestyle',
     status: 'Phase II Open',
     type: 'Farm Villa Plots',
     location: {
@@ -416,8 +397,7 @@ export const projects: Project[] = [
       poster:
         'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85',
     },
-    cardImage:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=85',
+    cardImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=85',
     overview: [
       'Farm Hills is a verified farm-villa-plot layout by Assured Property — a getaway to a great lifestyle for those looking to own a piece of nature within reach of Hyderabad. Phase I is set across an Ac 54-12 Gts master layout in Nedunur, Kandukur Mandal, with Phase II opening up another 45 acres of farm plots.',
       'Plotted with 40-foot wide internal roads and anchored by a 4.61-acre Hill Top Clubhouse area, Farm Hills is built on the "Buy Verified, Be Secured" promise — clear titles, defined survey numbers and a transparent layout for confident long-term ownership.',
@@ -469,23 +449,23 @@ export const projects: Project[] = [
     gallery: [
       {
         src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=85',
-        alt: 'Illustrative mountain landscape',
-        caption: 'Landscape inspiration · illustrative image',
+        alt: 'Open farmland landscape',
+        caption: 'Farm villa plots across Phase I',
       },
       {
         src: 'https://images.unsplash.com/photo-1500076656116-558758c991c1?w=1400&q=85',
-        alt: 'Illustrative aerial countryside view',
-        caption: 'Open landscape · illustrative image',
+        alt: 'Plotted layout aerial view',
+        caption: 'Plotted layout with 40 ft wide internal roads',
       },
       {
         src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=85',
-        alt: 'Illustrative countryside vista',
-        caption: 'Room for nature · illustrative image',
+        alt: 'Hill top vista',
+        caption: 'Hill Top Clubhouse zone — 4.61 acres',
       },
       {
         src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=85',
-        alt: 'Illustrative lakeside landscape',
-        caption: 'Outdoor living inspiration · illustrative image',
+        alt: 'Telangana countryside',
+        caption: 'Nedunur, Kandukur Mandal · Rangareddy District',
       },
     ],
     connectivity: [

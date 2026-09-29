@@ -3,8 +3,8 @@ import SmoothScroll from '@/components/SmoothScroll'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'VIP Homes | Our Projects & Real Estate Vision',
-  description: 'VIP Homes (Vishwaprerana Creative Homes) — own and partnered premium developments across Telangana, including VIP Creative Homes, Bliss In The Woods, Farm Hills and Indus Homes.',
+  title: 'VipHomes | Our Projects & Real Estate Vision',
+  description: 'VipHomes (Vishwaprerana Creative Homes) — own and partnered premium developments across Telangana, including VIP Creative Homes, Bliss In The Woods, Farm Hills and Indus Homes.',
 }
 
 export default function RootLayout({

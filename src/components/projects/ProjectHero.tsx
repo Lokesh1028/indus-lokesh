@@ -57,7 +57,7 @@ export default function ProjectHero({ project }: { project: Project }) {
         <div className="project-hero-vignette" />
       </div>
 
-      <div className="project-hero-content">
+      <div className="project-hero-content" data-scroll-parallax-y="0.18">
         <nav className="project-hero-breadcrumbs" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span>/</span>
@@ -91,7 +91,6 @@ export default function ProjectHero({ project }: { project: Project }) {
         </div>
       </div>
 
-      {project.imageryNote && <p className="project-imagery-note">{project.imageryNote}</p>}
       <div className="project-hero-scroll" aria-hidden="true">
         <span />
       </div>

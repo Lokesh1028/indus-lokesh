@@ -21,17 +21,14 @@ export default function ProjectOverview({ project }: { project: Project }) {
             </h2>
           </div>
           {project.overview.map((para, i) => (
-            <div
-              key={i}
-              className={`tp-fade-left stagger-delay-${Math.min(i + 2, 6)}`}
-            >
+            <div key={i} className={`tp-fade-left stagger-delay-${Math.min(i + 2, 6)}`}>
               <p className="section-text mb-6">{para}</p>
             </div>
           ))}
           {project.surveyNumbers && (
             <div className="tp-fade-left stagger-delay-4 mt-8 p-6 border-l-2 border-[var(--color-accent)] bg-[var(--color-bg-off)]">
               <p className="font-body text-[10px] font-medium tracking-[2px] uppercase text-[var(--color-text-light)] mb-2">
-                {project.referenceLabel || 'Survey Numbers'}
+                Survey Numbers
               </p>
               <p className="font-heading text-xl text-[var(--color-black)]">
                 {project.surveyNumbers}
@@ -45,18 +42,13 @@ export default function ProjectOverview({ project }: { project: Project }) {
             {project.stats.map((stat, i) => {
               const { target, suffix } = splitNumeric(stat.value)
               return (
-                <div
-                  key={i}
-                  className={`tp-fade-bottom stagger-delay-${i + 1}`}
-                >
+                <div key={i} className={`tp-fade-bottom stagger-delay-${i + 1}`}>
                   <p
-                    className={`stat-number ${/^[\d.,]+/.test(stat.value) ? 'stat-counter text-5xl md:text-6xl' : 'text-3xl md:text-4xl'} mb-3`}
-                    data-target={
-                      /^[\d.,]+/.test(stat.value) ? target : undefined
-                    }
+                    className="stat-number stat-counter text-5xl md:text-6xl mb-3"
+                    data-target={target}
                     data-suffix={suffix}
                   >
-                    {stat.value}
+                    0{suffix}
                   </p>
                   <p className="font-body text-[10px] font-medium tracking-[2px] uppercase text-[var(--color-text-light)] leading-relaxed">
                     {stat.label}
