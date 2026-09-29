@@ -44,8 +44,8 @@ export default function ProjectDetailPage() {
     <>
       <ProjectHero project={project} />
       <ProjectOverview project={project} />
-      <ProjectHighlights project={project} />
       <ProjectGallery project={project} />
+      <ProjectHighlights project={project} />
       <ProjectLocation project={project} />
       <ProjectCTA project={project} />
     </>

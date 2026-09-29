@@ -20,6 +20,8 @@ export default function ProjectCard({
         />
         <div className="project-card-overlay" />
         <span className="project-card-status">{project.status}</span>
+        {project.imageryNote && <span className="absolute bottom-4 left-5 text-white text-[10px] bg-black/60 px-3 py-1">Illustrative imagery</span>}
+        {project.status === 'Upcoming' && <span className="absolute bottom-4 left-5 text-white text-[10px] bg-black/60 px-3 py-1">Conceptual representation</span>}
       </div>
 
       <div className="project-card-body">

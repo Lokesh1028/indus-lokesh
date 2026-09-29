@@ -45,8 +45,8 @@ const services = [
     ),
   },
   {
-    title: 'Investment Consulting',
-    desc: 'Honest read on what a plot or villa in any of our projects is likely to mean for you — second home, weekend getaway, or longer-term land hold.',
+    title: 'Ownership Planning',
+    desc: 'Discuss how a home or plot fits your needs, whether for everyday living, a second home or future plans.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 3v18h18" />
@@ -80,15 +80,14 @@ export default function FullParallax() {
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
             <p className="section-text max-w-2xl mx-auto">
-              Six things we actually do for buyers exploring our projects — no fluff, no
-              hidden fees.
+              A clear point of contact as you explore, choose and move forward with a home
+              in one of our developments.
             </p>
           </div>
         </div>
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          data-scroll-skew-wave
         >
           {services.map((s, i) => (
             <div key={i} className="feature-card-clean group">

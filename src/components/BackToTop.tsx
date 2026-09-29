@@ -1,8 +1,13 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { smoothScrollTop } from '@/components/SmoothScroll'
 
 export default function BackToTop() {
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    setPortalTarget(document.body)
+  }, [])
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -10,12 +15,12 @@ export default function BackToTop() {
       setVisible(window.scrollY > 500)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const content = () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToTop = () => smoothScrollTop()
 
-  return (
+  const content = (
     <button
       className={`back-to-top ${visible ? 'visible' : ''}`}
       onClick={scrollToTop}
@@ -24,4 +29,5 @@ export default function BackToTop() {
       ↑
     </button>
   )
+  return portalTarget ? createPortal(content, portalTarget) : content
 }

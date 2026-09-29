@@ -1,59 +1,55 @@
 'use client'
+import { projects } from '@/data/projects'
+
+const projectCounts = [
+  { value: projects.length, label: 'Projects presented' },
+  {
+    value: projects.filter((p) => p.status === 'Upcoming').length,
+    label: 'Upcoming community',
+  },
+  {
+    value: projects.filter((p) => !['Upcoming', 'Completed'].includes(p.status))
+      .length,
+    label: 'Ongoing developments',
+  },
+  {
+    value: projects.filter((p) => p.status === 'Completed').length,
+    label: 'Completed project',
+  },
+]
 
 export default function IntroSection() {
   return (
-    <section id="intro" className="py-12 md:py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-24">
-          <div className="tp-fade-bottom">
-            <span className="section-subtitle">About VipHomes</span>
-          </div>
-          <div className="tp-fade-bottom stagger-delay-1">
-            <h2 className="section-title text-5xl md:text-7xl lg:text-8xl mb-12">
-              A vision-led<br /><em>real estate developer</em>
+    <section id="intro" className="builder-intro py-16 md:py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-start">
+          <div className="tp-fade-left">
+            <span className="section-subtitle">About VIP Homes</span>
+            <h2 className="section-title text-5xl md:text-7xl leading-tight">
+              Built with purpose.
+              <br />
+              <em>Planned for life.</em>
             </h2>
           </div>
-          <div className="tp-fade-bottom stagger-delay-2">
-            <p className="section-text max-w-3xl mx-auto mb-8">
-              Vishwaprerana Creative Homes (OPC) Private Limited, operating as VipHomes, builds
-              its own developments and partners on carefully selected developments. Our role is
-              not just to list projects, but to stand behind projects that are shaped by our
-              vision, guided by our mission and aligned with the long-term value we want to
-              create.
+          <div className="tp-fade-right">
+            <p className="section-text mb-6">
+              Vishwaprerana Creative Homes (OPC) Private Limited, operating as
+              VIP Homes, develops its own projects and participates in selected
+              partnerships across Telangana.
             </p>
-          </div>
-          <div className="tp-fade-bottom stagger-delay-3">
-            <p className="section-text max-w-3xl mx-auto">
-              Each development presented here reflects that approach — from
-              <em> Bliss In The Woods</em> and <em>Farm Hills</em> to the completed
-              <em> Indus Homes</em> villa community. They are connected by the same belief: land
-              should be developed with purpose, planning and responsibility, creating spaces that
-              carry both lifestyle value and legacy value.
+            <p className="section-text">
+              Our vision starts with how a place will be lived in: the natural
+              light, the relationship with the outdoors and the comfort of
+              everyday routines. Thoughtful planning and dependable execution
+              turn that vision into homes with lasting value.
             </p>
           </div>
         </div>
-
-        <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-24"
-          data-scroll-rise
-        >
-          {[
-            { target: '3', suffix: '', label: 'Own & Partnered Projects' },
-            { target: '450', suffix: '', label: 'Acre Eco-Tourism Park' },
-            { target: '54', suffix: '+', label: 'Acre Farm Hills Layout' },
-            { target: '16', suffix: '+', label: 'Acre Completed Villa Community' },
-          ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <p
-                className="stat-number stat-counter text-6xl md:text-7xl mb-4"
-                data-target={stat.target}
-                data-suffix={stat.suffix}
-              >
-                0{stat.suffix}
-              </p>
-              <p className="font-body text-[10px] font-medium text-[var(--color-text-light)] tracking-[2px] uppercase">
-                {stat.label}
-              </p>
+        <div className="builder-portfolio-stats" aria-label="Our portfolio">
+          {projectCounts.map((stat) => (
+            <div key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
             </div>
           ))}
         </div>

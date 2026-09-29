@@ -1,64 +1,51 @@
 'use client'
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollSmoother } from 'gsap/ScrollSmoother'
 
+/** Keep native browser scrolling so links, forms and dialogs behave consistently. */
 export default function SmoothScroll() {
   const pathname = usePathname()
-
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) return
-
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
-    const existing = ScrollSmoother.get()
-    if (existing) existing.kill()
-
-    const smoother = ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 1.4,
-      effects: true,
-      smoothTouch: 0.1,
-      ignoreMobileResize: true,
-    })
-
-    return () => {
-      smoother.kill()
+    if (!window.location.hash) return
+    let id: string
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1))
+    } catch {
+      return
     }
+    const frame = requestAnimationFrame(() => {
+      const element = document.getElementById(id)
+      if (element) smoothScrollTo(element)
+    })
+    return () => cancelAnimationFrame(frame)
   }, [pathname])
-
   return null
 }
 
-/** Smooth-scroll to an element id or selector. Falls back to native scroll. */
-export function smoothScrollTo(target: string | HTMLElement | number, headerOffset = 80) {
+export function smoothScrollTo(
+  target: string | HTMLElement | number,
+  headerOffset = 80,
+) {
   if (typeof window === 'undefined') return
-  const smoother = ScrollSmoother.get?.()
-  if (smoother) {
-    if (typeof target === 'number') {
-      smoother.scrollTo(target, true)
-      return
-    }
-    const el = typeof target === 'string' ? document.querySelector(target) : target
-    if (!el) return
-    // "top {offset}px" = align target's top {offset}px below viewport top so
-    // it clears the fixed header.
-    smoother.scrollTo(el as HTMLElement, true, `top ${headerOffset}px`)
-    return
-  }
-  // Fallback when smoother isn't active (e.g. reduced motion).
+  const behavior: ScrollBehavior = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+    ? 'auto'
+    : 'smooth'
   if (typeof target === 'number') {
-    window.scrollTo({ top: target, behavior: 'smooth' })
+    window.scrollTo({ top: target, behavior })
     return
   }
-  const el = typeof target === 'string' ? document.querySelector(target) : target
-  if (el && el instanceof HTMLElement) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const element =
+    typeof target === 'string' ? document.querySelector(target) : target
+  if (!(element instanceof HTMLElement)) return
+  window.scrollTo({
+    top: Math.max(
+      0,
+      window.scrollY + element.getBoundingClientRect().top - headerOffset,
+    ),
+    behavior,
+  })
 }
 
 export function smoothScrollTop() {

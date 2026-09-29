@@ -14,14 +14,13 @@ export default function ProjectsListPage() {
           </div>
           <div className="tp-fade-bottom stagger-delay-1">
             <h1 className="section-title text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
-              Two stories,<br /><em>two getaways</em>
+              Places to live.<br /><em>Room to belong.</em>
             </h1>
           </div>
           <div className="tp-fade-bottom stagger-delay-2">
             <p className="font-body text-[16px] font-light text-[var(--color-text)] max-w-2xl leading-relaxed">
-              VipHomes builds its own developments and partners on the ones we&apos;d genuinely
-              visit on a weekend — a forest-wrapped villa community on the ORR corridor, and a
-              verified farm-villa-plot layout in the Rangareddy land belt.
+              Explore our upcoming, ongoing and completed developments, from contemporary
+              villa living at VIP Creative Homes to established communities across Telangana.
             </p>
           </div>
         </div>
